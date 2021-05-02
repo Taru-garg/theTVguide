@@ -7,68 +7,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TVG</title>
     <!-- jQuery library -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.ico' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/scripts/search.js"></script>
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
 </head>
 
 <body>
     <div class="site">
-	
+
         <nav class="nav">
-            <div class="nav__title">Site Title</div>
-            <ul class="nav__list">
-                <li class="nav__item">Services</li>
-                <li class="nav__item">About Us</li>
-                <li class="nav__item">Blog</li>
-            </ul>
+            <div class="nav__title">
+                <a href="index.html">
+                    <img class="logo" src="assets/images/default.png" />
+                </a>
+            </div>
+            <div>
+                <input type="text" id="nav__search" class="nav__search" placeholder="Quick Search..." />
+            </div>
+            <div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#">
+                            <span class="material-icons">
+                                cloud_upload
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#">
+                            <span class="material-icons-outlined">
+                                shuffle
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#">
+                            <span class="material-icons-outlined">
+                                account_circle
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        
+
         <div class="hero">
             <h1>Position Sticky Subnav</h1>
         </div>
-        
+
         <section class="section">
             <h2>A Section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis voluptatibus corporis. Voluptate, cumque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt
+                voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis
+                voluptatibus corporis. Voluptate, cumque?</p>
         </section>
-        
-        <div class="subnav">
-            <div class="subnav__container">
-                <div class="subnav__title">
-                    <h1>Sub Nav</h1>
-                </div>
-                <ul class="subnav__list">
-                    <li class="subnav__item">Section 1</li>
-                    <li class="subnav__item">Section 2</li>
-                    <li class="subnav__item">Section 3</li>
-                </ul>
-            </div>
-        </div>
-    
+
         <section class="section">
             <h2>A Section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis voluptatibus corporis. Voluptate, cumque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt
+                voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis
+                voluptatibus corporis. Voluptate, cumque?</p>
         </section>
         <section class="section">
             <h2>A Section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis voluptatibus corporis. Voluptate, cumque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt
+                voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis
+                voluptatibus corporis. Voluptate, cumque?</p>
         </section>
         <section class="section">
             <h2>A Section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis voluptatibus corporis. Voluptate, cumque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt
+                voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis
+                voluptatibus corporis. Voluptate, cumque?</p>
         </section>
         <section class="section">
             <h2>A Section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis voluptatibus corporis. Voluptate, cumque?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, minus laudantium excepturi incidunt
+                voluptate impedit quisquam. Dicta sed, ea perferendis consequuntur expedita nesciunt nam quae omnis
+                voluptatibus corporis. Voluptate, cumque?</p>
         </section>
-        <footer>
-            <p>No Copyright 1996</p>
-        </footer>
     </div>
 </body>
+<script>
+    document.getElementById("nav__search").addEventListener("input", function() {
+        extractData(this.value);
+    });
+</script>
 
 </html>

@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 100%;
+  }
+
+.nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+  }
+  @media (max-width: 900px) {
+    .nav {
+      flex-direction: column;
+      height: 250px;
+    }
+  }
+  .nav {
+    background: #BE93C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+  }
+  .nav__title {
+    margin: 0px 30px;
+    font-family: 'Bad Script', cursive;
+    font-size: 35px;
+  }
+  .nav__title a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .nav__title .logo {
+    margin-top: 15px;
+    width: 100px;
+    align-self: center;
+  }
+
+  .nav__item a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav__item {
+    display: inline-block;
+    margin: 0px 30px;
+  }
+
+  .nav__search[type=text] {
+    outline: none;
+    border-style: none;
+    overflow: hidden;
+    width : 500px;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    background-image: url('../images/searchicon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding: 12px 20px 12px 40px;
+    font-size: 16px;
+  }
+  
+  .hero {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #BBDEFB;
+  }
+  .hero h1 {
+    font-size: 6em;
+    margin: 0 90px;
+    text-align: center;
+  }
+  .section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 90px 30px;
+    background-color: #FFCDD2;
+    text-align: center;
+  }
+  .section h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+  .section p {
+    line-height: 1.625em;
+    margin: 0 auto;
+    max-width: 480px;
+  }
