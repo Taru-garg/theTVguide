@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 100%;
+  }
+
+.nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    top: 0;
+  }
+  
+  .subnav {
+    position: sticky;
+    bottom: 0;
+    top: 60px;
+  }
+  
+  .nav {
+    background: #42A5F5;
+  }
+  .nav__title {
+    margin: 0px 30px;
+  }
+  .nav__item {
+    display: inline-block;
+    margin: 0px 30px;
+  }
+  
+  .hero {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #BBDEFB;
+  }
+  .hero h1 {
+    font-size: 6em;
+    margin: 0 90px;
+    text-align: center;
+  }
+  
+  .subnav {
+    background: #fff;
+    border-bottom: 1px solid #222;
+  }
+  .subnav__container {
+    align-items: baseline;
+    display: flex;
+    margin: 0 60px;
+    padding: 15px 0;
+  }
+  .subnav__title {
+    font-size: 1.25em;
+  }
+  .subnav__list {
+    margin: 0 15px;
+  }
+  .subnav__item {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 5px;
+  }
+  
+  .section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 90px 30px;
+    background-color: #FFCDD2;
+    text-align: center;
+  }
+  .section h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+  .section p {
+    line-height: 1.625em;
+    margin: 0 auto;
+    max-width: 480px;
+  }
+  
+  footer {
+    text-align: center;
+  }
