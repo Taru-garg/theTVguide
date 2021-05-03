@@ -13,6 +13,7 @@ body {
     height: 60px;
     top: 0;
     border-radius: 0px 0px 10px 10px;
+    z-index: 2;
   }
   @media (max-width: 900px) {
     .nav {
@@ -21,9 +22,10 @@ body {
     }
   }
   .nav {
-    background: #BE93C5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: #f7ff00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #db36a4, #f7ff00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .nav__title {
     margin: 0px 30px;
@@ -71,7 +73,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #BBDEFB;
+    background: #CC95C0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .hero h1 {
     font-size: 6em;
@@ -79,14 +84,18 @@ body {
     text-align: center;
   }
   .section {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 60px auto;
-    padding: 90px 30px;
-    background-color: #FFCDD2;
+    padding: 5px 20px;
+    background: #1A2980;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
     text-align: center;
   }
   .section h2 {
     font-size: 3em;
+    margin-top: 5px;
     margin-bottom: 15px;
   }
   .section p {
@@ -94,3 +103,10 @@ body {
     margin: 0 auto;
     max-width: 480px;
   }
+
+  .splide__slide__container img {
+    height: 500px;
+    width: 400px;
+    object-fit: contain;
+  }
+
