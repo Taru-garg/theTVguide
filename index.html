@@ -11,7 +11,7 @@
 
     <!--Self Developed-->
     <script src="assets/scripts/search.js"></script>
-    <script src="assets/scripts/script.js" async></script>
+    <!-- <script src="assets/scripts/script.js" async></script> -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.ico' />
 
@@ -68,34 +68,21 @@
 
         <!--Must Watch-->
         <div class="hero">
-        <div class="slider-container slider1">
-      <div class="slider-items">
-          <div class="item">
-              <img src="assets/images/poster2.jpg" alt="slide" />
-              <div class="caption">
-                 slide 1
-              </div>
-          </div>
-          <div class="item">
-              <img src="assets/images/poster2.jpg" alt="slide" />
-              <div class="caption">
-                 slide 2
-              </div>
-          </div>
-          <div class="item">
-              <img src="assets/images/poster2.jpg" alt="slide" />
-              <div class="caption">
-                 slide 3
-              </div>
-          </div>
-      </div>
-     
-      <!-- slide controls -->
-        <div class="prev-slide"><</div>
-        <div class="next-slide">></div>
-      <!-- slide controls -->
-
-  </div>
+            <div id="image-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="assets/images/poster2.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/images/poster2.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/images/poster2.jpg">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!--Horizontal Slider 1-->
@@ -121,6 +108,7 @@
             </div>
         </section>
 
+        <!--Horizontal Slider 2-->
         <section class="section">
             <h2>A Section</h2>
             <div class="splide">
@@ -157,9 +145,17 @@
     </div>
 </body>
 <script>
+    // Main Slider
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#image-slider', {
+            rewind: true,
+            pagination : false
+        }).mount();
+    });
+
     // Horizontal Slider
     var elms = document.getElementsByClassName('splide');
-    for (var i = 0, len = elms.length; i < len; i++) {
+    for (var i = 1, len = elms.length; i < len; i++) {
         new Splide(elms[i], {
             rewind: true,
             perPage: 3,
