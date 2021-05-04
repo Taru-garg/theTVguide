@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% block container %}
+<!--Must Watch-->
+<div class="hero">
+    <div id="image-slider" class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="../static/assets/images/poster2.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="../static/assets/images/poster2.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="../static/assets/images/poster2.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--Horizontal Slider 1-->
+<section class="section">
+    <h2>A Section</h2>
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="splide__slide__container">
+                        <img src="../static/assets/images/poster.jpg">
+                    </div>
+                    Lorem Ipsum Dolor Sit Amet
+                </li>
+                <li class="splide__slide">
+                    <div class="splide__slide__container">
+                        <img src="../static/assets/images/poster.jpg">
+                    </div>
+                    Lorem Ipsum Dolor Sit Amet
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--Horizontal Slider 2-->
+<section class="section">
+    <h2>A Section</h2>
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="splide__slide__container">
+                        <img src="../static/assets/images/poster.jpg">
+                    </div>
+                    Lorem Ipsum Dolor Sit Amet
+                </li>
+                <li class="splide__slide">
+                    <div class="splide__slide__container">
+                        <img src="../static/assets/images/poster.jpg">
+                    </div>
+                    Lorem Ipsum Dolor Sit Amet
+                </li>
+                <li class="splide__slide">
+                    <div class="splide__slide__container">
+                        <img src="../static/assets/images/poster.jpg">
+                    </div>
+                    Lorem Ipsum Dolor Sit Amet
+                </li>
+                <li class="splide__slide">
+                    <div class="splide__slide__container">
+                        <img src="../static/assets/images/poster.jpg">
+                    </div>
+                    Lorem Ipsum Dolor Sit Amet
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+</div>
+</body>
+{% endblock %}
+{% block script %}
+<script>
+    // Main Slider
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#image-slider', {
+            rewind: true,
+            pagination: false
+        }).mount();
+    });
+
+    // Horizontal Slider
+    var elms = document.getElementsByClassName('splide');
+    for (var i = 1, len = elms.length; i < len; i++) {
+        new Splide(elms[i], {
+            rewind: true,
+            perPage: 3,
+            permove: 1,
+            breakpoins: {
+                640: {
+                    height: '6rem',
+                }
+            },
+        }).mount();
+    }
+    // Script for Search Sanitization
+    document.getElementById("nav__search").addEventListener("input", function () {
+        extractData(this.value);
+    });
+</script>
+{% endblock %}

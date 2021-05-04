@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVG</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Self Developed-->
+    <script src="../static/assets/scripts/search.js"></script>
+    <!-- <script src="assets/scripts/script.js" async></script> -->
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='../static/assets/images/favicon.ico' />
+
+    <!--Splide JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+    <!-- Fonts and Icons-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="site">
+        <!--Navigation Bar-->
+        <nav class="nav">
+            <div class="nav__title">
+                <a href="index.html">
+                    <img class="logo" src="../static/assets/images/default.png" />
+                </a>
+            </div>
+            <div>
+                <input type="text" id="nav__search" class="nav__search" placeholder="Quick Search..." />
+            </div>
+            <div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#">
+                            <span class="material-icons">
+                                cloud_upload
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#">
+                            <span class="material-icons-outlined">
+                                shuffle
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#">
+                            <span class="material-icons-outlined">
+                                account_circle
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        {% block container %}
+        {% endblock %}
+    </div>
+
+</body>
+
+{% block script %}
+{% endblock %}
+
+</html>
