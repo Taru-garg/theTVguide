@@ -61,10 +61,11 @@ values
 
 SELECT * FROM GENRES;
 TRUNCATE TABLE GENRES;
+
 ---------------------------------------------------------------------------------------
 
---Creating table movies
---drop table movies
+-- Creating table movies
+-- drop table movies
 CREATE TABLE MOVIES (
     mov_id INTEGER PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
@@ -82,9 +83,10 @@ VALUES
 
 SELECT * FROM MOVIES;
 TRUNCATE TABLE MOVIES;
+
 ---------------------------------------------------------------------------------------
 
---Creating table ratings
+-- Creating table ratings
 CREATE TABLE RATINGS (
     mov_id INTEGER NOT NULL,
     rev_id INTEGER NOT NULL,
@@ -94,7 +96,7 @@ CREATE TABLE RATINGS (
     UNIQUE(mov_id,rev_id)   
 );
 
---Test for table RATINGS
+-- Test for table RATINGS
 INSERT INTO RATINGS
 VALUES
 (1,21,8.8,1888),
@@ -104,3 +106,67 @@ VALUES
 
 SELECT * FROM RATINGS;
 TRUNCATE TABLE RATINGS;
+
+---------------------------------------------------------------------------------------
+
+-- Creating table cast
+-- drop table cast
+CREATE TABLE CAST (
+    mov_id INTEGER,
+    act_id INTEGER,
+    PRIMARY KEY(mov_id, act_id),
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id),
+    FOREIGN KEY (act_id) REFERENCES ACTOR(act_id)
+);
+
+--Test for table CAST
+-- All the values must exist in movies and actor table
+INSERT INTO MOVIES
+VALUES
+(1,'Fight Club',151,'English','1999-10-15','Canada'),
+(2,'Shutter Island',139,'English','2010-02-13','Berlin');
+
+
+insert into actor
+values
+(1, 'Some', NULL, 'o', NULL),
+(2, 'Some', 'Name', 'm', NULL);
+
+INSERT INTO cast
+VALUES
+(1,2),
+(1,1),
+(2,1),
+(2,2);
+
+SELECT * FROM CAST;
+TRUNCATE TABLE CAST;
+TRUNCATE TABLE MOVIES;
+TRUNCATE TABLE ACTOR;
+
+---------------------------------------------------------------------------------------
+-- Creating table movieImageData
+-- drop table movieImageData
+
+CREATE table movieImageData (
+    mov_id INTEGER PRIMARY KEY,
+    backdrop VARCHAR(40),
+    poster VARCHAR(40),
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id)
+);
+
+-- Test for movieImageData
+-- mov_id must be in movie table
+insert into MOVIES
+values
+(1,'Fight Club',151,'English','1999-10-15','Canada'),
+(2,'Shutter Island',139,'English','2010-02-13','Berlin');
+
+insert into movieImageData
+values
+(1, 'somebackdrop', 'someposter'),
+(2, NULL, 'someposter');
+
+select * from movieImageData;
+truncate table movieImageData;
+truncate table movies;
