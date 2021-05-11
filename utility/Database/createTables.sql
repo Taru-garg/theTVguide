@@ -96,11 +96,6 @@ CREATE TABLE RATINGS (
 );
 
 -- Test for table RATINGS
-insert into MOVIES
-values
-(1,'Fight Club',151,'English','1999-10-15','Canada'),
-(2,'Shutter Island',139,'English','2010-02-13','Berlin');
-
 INSERT INTO RATINGS
 VALUES
 (1,21,8.8,1888),
