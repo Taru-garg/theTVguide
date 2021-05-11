@@ -54,8 +54,53 @@ create table GENRES (
 -- Test for genres table
 insert into GENRES
 values
-(1, 'Some Genre Name');
--- (2, NULL); -- Error
+(1, 'Some Genre Name'),
+--(2, NULL); -- Error
+(3,'Horror'),
+(4,'Sci-fi');
 
+SELECT * FROM GENRES;
+TRUNCATE TABLE GENRES;
 ---------------------------------------------------------------------------------------
 
+--Creating table movies
+--drop table movies
+CREATE TABLE MOVIES (
+    mov_id INTEGER PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    length INTEGER,             --in minutes
+    language VARCHAR(50),
+    initial_release_date DATE,
+    release_country VARCHAR(20)
+);
+
+--Test for table MOVIES
+INSERT INTO MOVIES
+VALUES
+(1,'Fight Club',151,'English','1999-10-15','Canada'),
+(2,'Shutter Island',139,'English','2010-02-13','Berlin');
+
+SELECT * FROM MOVIES;
+TRUNCATE TABLE MOVIES;
+---------------------------------------------------------------------------------------
+
+--Creating table ratings
+CREATE TABLE RATINGS (
+    mov_id INTEGER NOT NULL,
+    rev_id INTEGER NOT NULL,
+    ratings DECIMAL(2,1),
+    num_of_ratings INTEGER,
+    FOREIGN KEY(mov_id) REFERENCES MOVIES(mov_id),
+    UNIQUE(mov_id,rev_id)   
+);
+
+--Test for table RATINGS
+INSERT INTO RATINGS
+VALUES
+(1,21,8.8,1888),
+(1,22,8.6,1889),
+(2,21,9.1,2000),
+(2,22,9.7,2001);
+
+SELECT * FROM RATINGS;
+TRUNCATE TABLE RATINGS;
