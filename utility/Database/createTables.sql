@@ -15,7 +15,7 @@ insert into actor
 values
 (1, 'Some', NULL, 'o', NULL),
 -- (2, 'Some', 'Name', 'b', NULL), -- Error
-(3, 'Some', 'Name', 'M', '2013-04-21');
+(2, 'Some', 'Name', 'M', '2013-04-21');
 -- (4, 'Some', 'Name', 'F', '2021-07-21') -- Error
 select * from actor;
 truncate table actor;
@@ -82,7 +82,6 @@ VALUES
 (2,'Shutter Island',139,'English','2010-02-13','Berlin');
 
 SELECT * FROM MOVIES;
-TRUNCATE TABLE MOVIES;
 
 ---------------------------------------------------------------------------------------
 
@@ -92,11 +91,16 @@ CREATE TABLE RATINGS (
     rev_id INTEGER NOT NULL,
     ratings DECIMAL(2,1),
     num_of_ratings INTEGER,
-    FOREIGN KEY(mov_id) REFERENCES MOVIES(mov_id),
+    FOREIGN KEY(mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
     UNIQUE(mov_id,rev_id)   
 );
 
 -- Test for table RATINGS
+insert into MOVIES
+values
+(1,'Fight Club',151,'English','1999-10-15','Canada'),
+(2,'Shutter Island',139,'English','2010-02-13','Berlin');
+
 INSERT INTO RATINGS
 VALUES
 (1,21,8.8,1888),
@@ -115,23 +119,12 @@ CREATE TABLE CAST (
     mov_id INTEGER,
     act_id INTEGER,
     PRIMARY KEY(mov_id, act_id),
-    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id),
-    FOREIGN KEY (act_id) REFERENCES ACTOR(act_id)
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
+    FOREIGN KEY (act_id) REFERENCES ACTOR(act_id) ON DELETE CASCADE
 );
 
 --Test for table CAST
 -- All the values must exist in movies and actor table
-INSERT INTO MOVIES
-VALUES
-(1,'Fight Club',151,'English','1999-10-15','Canada'),
-(2,'Shutter Island',139,'English','2010-02-13','Berlin');
-
-
-insert into actor
-values
-(1, 'Some', NULL, 'o', NULL),
-(2, 'Some', 'Name', 'm', NULL);
-
 INSERT INTO cast
 VALUES
 (1,2),
@@ -141,8 +134,6 @@ VALUES
 
 SELECT * FROM CAST;
 TRUNCATE TABLE CAST;
-TRUNCATE TABLE MOVIES;
-TRUNCATE TABLE ACTOR;
 
 ---------------------------------------------------------------------------------------
 -- Creating table movieImageData
@@ -152,15 +143,11 @@ CREATE table movieImageData (
     mov_id INTEGER PRIMARY KEY,
     backdrop VARCHAR(40),
     poster VARCHAR(40),
-    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id)
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE
 );
 
 -- Test for movieImageData
 -- mov_id must be in movie table
-insert into MOVIES
-values
-(1,'Fight Club',151,'English','1999-10-15','Canada'),
-(2,'Shutter Island',139,'English','2010-02-13','Berlin');
 
 insert into movieImageData
 values
@@ -169,4 +156,8 @@ values
 
 select * from movieImageData;
 truncate table movieImageData;
-truncate table movies;
+
+-- Deleting all values because they
+-- have a column which is foreign key
+delete from MOVIES where 1=1;
+delete from actor where 1=1;
