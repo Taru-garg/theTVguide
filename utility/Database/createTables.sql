@@ -69,7 +69,7 @@ TRUNCATE TABLE GENRES;
 CREATE TABLE MOVIES (
     mov_id INTEGER PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
-    overview VARCHAR(400),
+    overview VARCHAR(MAX),
     length INTEGER,             --in minutes
     language VARCHAR(50),
     initial_release_date DATE,
