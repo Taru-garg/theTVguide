@@ -1,5 +1,25 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
+
+
+def createInsertQueryGenres(filename):
+    # Read the Data from the file provided
+    movieData = pd.read_csv(filename)
+
+    # Base Insert statement
+    statement = "INSERT INTO GENRES VALUES "
+
+    # Fetching all the unique Genres from the Genres Column Ignoring the null vals
+    uniqueGenres = movieData['Genres'].dropna().unique()
+    genId = 1
+
+    # Make Query and insert it into a .sql file
+    for genre in uniqueGenres:
+        InsertQuery = statement + f"({genId}, '{genre}');\n"
+        with open('utility/Database/genreTable.sql', 'a+') as file:
+            file.write(InsertQuery)
+        genId = genId + 1
+
 
 #Use for movie_collection_data.csv file
 def CreateInsertQuery(filename):
@@ -13,24 +33,6 @@ def CreateInsertQuery(filename):
     for i in range(5):   #replace 5 with Movie_data.shape[0] (number of records)
         statement += '('
         for j in attributesM:
-            if pd.isnull(Movie_data[j][i]):
-                s = "NULL"
-            else:
-                s = "'" + "%s" %Movie_data[j][i] + "'"
-            statement += s + ','
-        statement = statement.rstrip(',')
-        statement += '),'
-    statement = statement.rstrip(',')
-    statement += ';'
-    print('\n')
-    print(statement)
-
-    #Table : GENRE
-    attributesG = ["Genres"]  #gen_id is not present currently 
-    statement = "INSERT INTO GENRES VALUES "
-    for i in range(15):   #replace 15 with Movie_data.shape[0] (number of records)
-        statement += '('
-        for j in attributesG:
             if pd.isnull(Movie_data[j][i]):
                 s = "NULL"
             else:
@@ -64,7 +66,7 @@ def CreateInsertQuery(filename):
 
 if __name__=="__main__":
     filename = input("Enter file path:")
-    CreateInsertQuery(filename)
+    createInsertQueryGenres(filename)
 
 
 
