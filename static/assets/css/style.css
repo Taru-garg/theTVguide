@@ -135,3 +135,12 @@ body {
       object-fit: fill;
     } 
   }
+  #rate {
+    padding: 0;
+  }
+  #rate img {
+    width: 100%;
+  }
+  #rate .movie {
+    margin-bottom: 100px;
+  }
