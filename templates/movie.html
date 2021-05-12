@@ -1,15 +1,63 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
+
+{% block head %}
+<link rel='stylesheet' href='https://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0.min.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/trazyn/neoui-ng/master/dist/app.min.css'>
+<!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'> -->
+{% endblock head%}
 
 {% block container %}
-<div class="hero">
-    <ul class = "backdrop_container">
-        <li class="backdrop">
-            <img src="../static/assets/images/poster2.jpg">
-        </li>
-    </ul>
-</div>
+<div id="rate">
+  <div class="movie center-block" style="background-color:white">
+    <div class="cover">
+      <div class="skew">
+        <img src="../static/assets/images/poster.jpg">
+        <div class="meta">
+          <p class="subhead">
+            Interstellar (2014)
+          </p>
+          <p>
+            <span>PG-13</span>
+            <span>169 min</span>
+            <span>8.7</span>
+            <span>Action</span>
+          </p>
+          <s-rate ng-model="rate" ng-init="rate = 4.4"></s-rate>
+          <span>
+            <i class="md-icon-favorite"></i>
+            740,216 likes
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="preview">
+        <div class="min">
+          <img src="../static/assets/images/poster.jpg ">
+        </div>
+      </div>
 
-<section class="section">
-    <h2>Details</h2>
-</section>
-{% endblock %}
+      <div class="desc">
+        <p>
+        <h3>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</h3>
+        </p>
+        <p class="director"><b>Director:</b> <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_dr">Christopher
+            Nolan</a></p>
+        <p class="writers"><b>Writers:</b> <a href="//www.imdb.com/name/nm0634300/?ref_=tt_ov_wr">Jonathan Nolan</a>,
+          <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_wr">Christopher Nolan</a>
+        </p>
+        <p class="stars"><b>Stars:</b> <a href="//www.imdb.com/name/nm0000190/?ref_=tt_ov_st">Matthew McConaughey</a>,
+          <a href="//www.imdb.com/name/nm0004266/?ref_=tt_ov_st">Anne Hathaway</a>, <a
+            href="//www.imdb.com/name/nm1567113/?ref_=tt_ov_st">Jessica Chastain</a> | <a
+            href="//www.imdb.com/title/tt0816692/fullcredits?ref_=tt_ov_st_sm">See full cast and crew</a>
+
+        <div class="action">
+          <button class="md-btn md-btn-coral">
+            Watch Trailer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock container%}

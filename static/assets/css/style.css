@@ -136,7 +136,9 @@ body {
     } 
   }
   #rate {
-    padding: 0;
+    padding-top:0px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   #rate img {
     width: 100%;

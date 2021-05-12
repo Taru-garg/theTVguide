@@ -16,7 +16,7 @@ def createInsertQueryGenres(filename):
     # Make Query and insert it into a .sql file
     for genre in uniqueGenres:
         InsertQuery = statement + f"({genId}, '{genre}');\n"
-        with open('genreTable.sql', 'a+') as file:
+        with open('utility/Database/genreTable.sql', 'a+') as file:
             file.write(InsertQuery)
         genId = genId + 1
 
@@ -36,7 +36,7 @@ def createInsertQueryMovies(filename):
         values = values.rstrip(',')
         values += ");\n"
         query = statement + values
-        with open('moviesTable.sql', 'a+') as file:
+        with open('utility/Database/moviesTable.sql', 'a+') as file:
             file.write(query)
 
 def createInsertQueryImages(filename):
@@ -54,7 +54,7 @@ def createInsertQueryImages(filename):
         values = values.rstrip(',')
         values += ");\n"
         query = statement + values
-        with open('movieImageTable.sql', 'a+') as file:
+        with open('utility/Database/movieImageTable.sql', 'a+') as file:
             file.write(query)
             
 
