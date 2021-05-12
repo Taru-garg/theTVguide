@@ -15,7 +15,7 @@ insert into actor
 values
 (1, 'Some', NULL, 'o', NULL),
 -- (2, 'Some', 'Name', 'b', NULL), -- Error
-(3, 'Some', 'Name', 'M', '2013-04-21');
+(2, 'Some', 'Name', 'M', '2013-04-21');
 -- (4, 'Some', 'Name', 'F', '2021-07-21') -- Error
 select * from actor;
 truncate table actor;
@@ -61,13 +61,15 @@ values
 
 SELECT * FROM GENRES;
 TRUNCATE TABLE GENRES;
+
 ---------------------------------------------------------------------------------------
 
---Creating table movies
---drop table movies
+-- Creating table movies
+-- drop table movies
 CREATE TABLE MOVIES (
     mov_id INTEGER PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
+    overview VARCHAR(400),
     length INTEGER,             --in minutes
     language VARCHAR(50),
     initial_release_date DATE,
@@ -81,20 +83,20 @@ VALUES
 (2,'Shutter Island',139,'English','2010-02-13','Berlin');
 
 SELECT * FROM MOVIES;
-TRUNCATE TABLE MOVIES;
+
 ---------------------------------------------------------------------------------------
 
---Creating table ratings
+-- Creating table ratings
 CREATE TABLE RATINGS (
     mov_id INTEGER NOT NULL,
     rev_id INTEGER NOT NULL,
     ratings DECIMAL(2,1),
     num_of_ratings INTEGER,
-    FOREIGN KEY(mov_id) REFERENCES MOVIES(mov_id),
+    FOREIGN KEY(mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
     UNIQUE(mov_id,rev_id)   
 );
 
---Test for table RATINGS
+-- Test for table RATINGS
 INSERT INTO RATINGS
 VALUES
 (1,21,8.8,1888),
@@ -104,3 +106,54 @@ VALUES
 
 SELECT * FROM RATINGS;
 TRUNCATE TABLE RATINGS;
+
+---------------------------------------------------------------------------------------
+
+-- Creating table cast
+-- drop table cast
+CREATE TABLE CAST (
+    mov_id INTEGER,
+    act_id INTEGER,
+    PRIMARY KEY(mov_id, act_id),
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
+    FOREIGN KEY (act_id) REFERENCES ACTOR(act_id) ON DELETE CASCADE
+);
+
+--Test for table CAST
+-- All the values must exist in movies and actor table
+INSERT INTO cast
+VALUES
+(1,2),
+(1,1),
+(2,1),
+(2,2);
+
+SELECT * FROM CAST;
+TRUNCATE TABLE CAST;
+
+---------------------------------------------------------------------------------------
+-- Creating table movieImageData
+-- drop table movieImageData
+
+CREATE table movieImageData (
+    mov_id INTEGER PRIMARY KEY,
+    backdrop VARCHAR(40),
+    poster VARCHAR(40),
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE
+);
+
+-- Test for movieImageData
+-- mov_id must be in movie table
+
+insert into movieImageData
+values
+(1, 'somebackdrop', 'someposter'),
+(2, NULL, 'someposter');
+
+select * from movieImageData;
+truncate table movieImageData;
+
+-- Deleting all values because they
+-- have a column which is foreign key
+delete from MOVIES where 1=1;
+delete from actor where 1=1;
