@@ -30,7 +30,13 @@ def createInsertQueryActor(filepath):
 
     actId = 1
     for people in cast:
-        InsertQuery = statement + f"({actId}, '{people}');\n"
+        name = people.split(' ', 1)
+        if len(name) > 1:
+            InsertQuery = statement + f"({actId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
+        
+        # This step has to be done as sometimes actor might not have a last name
+        else :
+            InsertQuery = statement + f"({actId}, '{name[0]}', NULL, NULL, NULL);\n"
         with open("utility/Database/actorTable.sql", "a+") as file:
             file.write(InsertQuery)
         actId = actId + 1
