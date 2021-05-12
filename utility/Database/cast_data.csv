@@ -1,0 +1,478 @@
+N_ID,ID,Cast,Director,Producer
+0,10000,"Fausto Cabrera , Frank Ramírez , Delfina Guido",Sergio Cabrera,Sergio Cabrera
+1,10001,"Yahoo Serious , Odile Le Clezio , Peewee Wilson",Yahoo Serious,Yahoo Serious
+2,10002,"Bob Hoskins , Cathy Tyson , Michael Caine",Neil Jordan,Patrick Cassavetti
+3,10003,"Val Kilmer , Elisabeth Shue , Rade Šerbedžija",Phillip Noyce,Mace Neufeld
+4,10004,"Steven Weber , Tom Skerritt , Charles Durning",Mick Garris,Kelly Van Horn
+5,10005,"Matt Bushell , Denis Arndt , Ben Cross",James Dodson,Roee Sharon
+6,10006,"Robert Forster , Robert Loggia , Richard Roundtree",James M. Hausler,Timothy P. Haskins
+7,10007,"Glenn Jacobs , Christina Vidal , Luke Pegler",Gregory Dark,Jason Constantine
+8,10008,"Donald Sutherland , Sissy Spacek , James D'Arcy",Courtney Solomon,Andrei Boncea
+9,10009,"Joaquin Phoenix , Jeremy Suarez , Jason Raize",Aaron Blaise,Chuck Williams
+10,10010,"Patrick Dempsey , Mandy Moore , Jeremy Suarez",Ben Gluck,Carolyn Bates
+11,10011,"Matt McCoy , Haley Joel , Christien Tinsley",Ryan Schifrin,Theresa Eastman
+12,10012,"Christina Ricci , Jesse Eisenberg , Milo Ventimiglia",Wes Craven,Dixie J. Capp
+13,10013,"Kathleen Turner , Nicolas Cage , Helen Hunt",Francis Ford Coppola,Paul R. Gurian
+14,10014,"Robert Englund , Mark Patton , Kim Myers",Jack Sholder,Robert Shaye
+15,10015,"Clint Eastwood , Marsha Mason , Everett McGill",Clint Eastwood,Clint Eastwood
+16,10016,"Natasha Henstridge , Ice Cube , Jason Statham",John Carpenter,Sandy King
+17,10017,"Charlie Sheen , Nick Cassavetes , Sherilyn Fenn",Mike Marvin,John Kemeny
+18,10018,"Jürgen Vogel , Christiane Paul , Christina Papamichou",Wolfgang Becker,Stefan Arndt
+19,10019,"Andrew McCarthy , Kim Cattrall , Estelle Getty",Michael Gottlieb,Art Levinson
+20,10020,"Paige O'Hara , Robby Benson , Richard White",Gary Trousdale,Don Hahn
+21,10021,"Michael J. Fox , Helen Slater , Richard Jordan",Herbert Ross,Herbert Ross
+22,10022,"Vin Diesel , Morgan York , Max Thieriot",Adam Shankman,Roger Birnbaum
+23,10023,"Dan Aykroyd , Tom Hanks , Christopher Plummer",Tom Mankiewicz,Robert K. Weiss
+24,10024,"Cameron Diaz , Alec Baldwin , Abigail Breslin",Nick Cassavetes,Mark Johnson
+25,10025,"Lindsay Lohan , Chris Pine , Samaire Armstrong",Donald Petrie,Arnon Milchan
+26,10026,"Diora Baird , Carmen Electra , Jason Priestley",Michael Damian,Barry Robison
+27,10027,"Jet Li , Morgan Freeman , Bob Hoskins",Louis Leterrier,Luc Besson
+28,10028,"Jessica Alba , Mekhi Phifer , Joy Bryant",Bille Woodruff,Marc Platt
+29,10029,"Christian Slater , Cameron Diaz , Jon Favreau",Peter Berg,Diane Nabatoff
+30,10030,"Dane Cook , Jessica Alba , Dan Fogler",Mark Helfrich,Barry Katz
+31,10031,"Brian Blessed , Julie T. Wallace , Lara Clancy",James Shanks,Oliver Ronicle
+32,10032,"Kal Penn , Daniel Percival , Lauren Cohan",Mort Nathan,Peter Abrams
+33,10033,"Ryan Reynolds , Amy Smart , Anna Faris",Roger Kumble,Chris Bender
+34,10034,"Minnie Driver , Mary McCormack , Kevin McNally",Mel Smith,Nicky Kentish Barnes
+35,10035,"Jonathan Tucker , Emmanuelle Chriqui , James DeBello",Michael Davis,Ehud Bleiberg
+36,10036,"Mirco Nontschew , Boris Aljinovic , Gustav-Peter Wöhler",Sven Unterwaldt Jr.,Otto Waalkes
+37,10037,"Theresa Randle , Mark Dacascos , Jeff Fahey",Henry Crum,Roger Corman
+38,10039,"Choi Ji-woo , Jo Han-sun , Choi Sung-kook",Kim Seong-jung,Chung Tae-won
+39,10040,"Sandra Bullock , Regina King , Enrique Murciano",John Pasquin,Sandra Bullock
+40,10041,"Eric Colvin , Nadja Brand , Abbey Stirling",Adam Mason,Adam Mason
+41,10042,"Sybil Temchen , Ogy Durham , Mustafa Shakir",Olatunde Osunsanmi,Terry Robbins
+42,10044,"Sammo Hung , Jackie Chan , Yuen Biao",Sammo Hung,Leonard Ho Koon-Cheung
+43,10045,"David Belle , Cyril Raffaelli , Tony D'Amario",Pierre Morel,Luc Besson
+44,10046,"Vincent Cassel , Juliette Lewis , Temuera Morrison",Jan Kounen,Timothy Burrill
+45,10047,"Milla Jovovich , Dustin Hoffman , Faye Dunaway",Luc Besson,Luc Besson
+46,10048,"Josh Lucas , Jessica Biel , Jamie Foxx",Rob Cohen,Laura Ziskin
+47,10049,"Steven Seagal , Danny Webb , Andrew Bicknell",Michael Keusch,Binh Dang
+48,10050,"Kirsten Dunst , Ben Foster , Melissa Sagemiller",Tommy O'Haver,Paul Feldsher
+49,10051,"Cécile de France , Albert Dupontel , Laura Morante",Danièle Thompson,Christine Gozlan
+50,10052,"Kevin Costner , Joe Morton , Ron Rifkin",Tom Shadyac,Tom Shadyac
+51,10053,"Camilla Belle , Katie Cassidy , Tommy Flanagan",Simon West,John Davis
+52,10054,"Alexa PenaVega , Daryl Sabara , Antonio Banderas",Robert Rodriguez,Robert Rodriguez
+53,10055,"Christine Taylor , Shane Brolly , Chloë Grace Moretz",Michael Hurst,Mark Gottwald
+54,10056,"Frank Silvera , Jamie Smith , Irene Kane",Stanley Kubrick,Stanley Kubrick
+55,10057,"Charlie Sheen , Kiefer Sutherland , Chris O'Donnell",Stephen Herek,Roger Birnbaum
+56,10060,"50 Cent , Joy Bryant , Adewale Akinnuoye-Agbaje",Jim Sheridan,Jimmy Iovine
+57,10061,"Kurt Russell , Stacy Keach , Steve Buscemi",John Carpenter,Debra Hill
+58,10062,"Michael Madsen , Mac Fyfe , Erin Mackinnon",David Mitchell,Harvey Glazer
+59,10063,"Michelle Rodriguez , Taryn Manning , Eric Lively",Nicholas Mastandrea,David Wicht
+60,10064,"Morgan Freeman , LL Cool J , Justin Timberlake",David J. Burke,Boaz Davidson
+61,10065,"Ryan Reynolds , Melissa George , Jesse James",Andrew Douglas,Michael Bay
+62,10066,"Elisha Cuthbert , Chad Michael Murray , Brian Van Holt",Jaume Collet-Serra,Robert Zemeckis
+63,10067,"Tim Allen , Kristin Davis , Danny Glover",Brian Robbins,Tim Allen
+64,10068,"Mickey Rourke , Kim Basinger , Margaret Whitton",Adrian Lyne,Mark Damon
+65,10069,"Frankie Muniz , Samaire Armstrong , Jimmi Simpson",William Brent Bell,McG
+66,10070,"Balthazar Getty , Henry Rollins , Navi Rawat",John Gulager,Joel Soisson
+67,10071,"Will Arnett , Will Forte , Kristen Wiig",Bob Odenkirk,Tom Werner
+68,10072,"Robert Englund , Heather Langenkamp , Craig Wasson",Chuck Russell,Robert Shaye
+69,10073,"Alyson Hannigan , Eddie Griffin , Sophie Monk",Aaron Seltzer,Paul Schiff
+70,10074,"Andy Samberg , Jorma Taccone , Bill Hader",Akiva Schaffer,John Goldwyn
+71,10075,"Agnes Bruckner , Hugh Dancy , Katja Riemann",Katja von Garnier,Tom Rosenberg
+72,10076,"Paul Campbell , Julian Christopher , Michael Teigen",Carl Bessai,Andrew Boutilier
+73,10077,"Heike Makatsch , Armin Rohde , David Oyelowo",Peter Hyams,Frank Hübner
+74,10078,"Robert Webb , David Mitchell , Sarah Hadland",Andrew O'Connor,Jesse Armstrong
+75,10079,"Ed Stoppard , Tom Schilling , Bernadette Heerwagen",Reg Traviss,Ildikó Kemény
+76,10080,"Donald Turner , Jill Small , Hosea L. Simmons",Brian Maris,Brian Maris
+77,10081,"Jim Belushi , Louis Gossett Jr. , Rae Dawn Chong",Christopher Cain,Thomas H. Brodek
+78,10083,"Kevin Costner , Gene Hackman , Will Patton",Roger Donaldson,Robert Garland
+79,10084,"Vas Blackwood , Robbie Gee , Terry Stone",Julian Gilbey,James Hutchins
+80,10085,"Corri English , Scot Davis , Joshua Alba",Jason Todd Ipson,Julio Bove
+81,10086,"Benoît Poelvoorde , Rémy Belvaux , André Bonzel",Benoît Poelvoorde,Benoît Poelvoorde
+82,10087,"Joseph Fiennes , Kristin Scott Thomas , Iain Glen",Régis Wargnier,Izidore Codron
+83,10088,"David Fine , Josh McRae , Rebekah Hoyle",Daniel Hess,George Dykstra
+84,10089,"David Weidoff , John Patrick Jordan , Mitch Eakins",Charles Band,Scott Krycia
+85,10090,"Carlos Alazraqui , Mary Birdsong , Ben Garant",Ben Garant,Danny DeVito
+86,10091,"John Evans , James Heath , David Lumby",James Heath,Gratian Dimech
+87,10092,"Julian Morris , Lindy Booth , Jared Padalecki",Jeff Wadlow,Steven Butensky
+88,10093,"Sarah Michelle Gellar , Peter O'Brien , Adam Scott",Asif Kapadia,Aaron Ryder
+89,10094,"Scott Mechlowicz , Amelia Warner , Shaun Evans",Ringan Ledwidge,Tim Bevan
+90,10095,"Brandon Largent , America Young , Karl Champley",Tom Lewis,Tom Lewis
+91,10096,"Jennifer Garner , Mark Ruffalo , Judy Greer",Gary Winick,Susan Arnold
+92,10097,"Brendan Gleeson , Kim Cattrall , Ciarán Hinds",John Boorman,John Boorman
+93,10098,"Charlie Chaplin , Jackie Coogan , Edna Purviance",Charlie Chaplin,Charlie Chaplin
+94,10100,"Ralf Moeller , Julia Stinshoff , Gregor Bloéb",Jorgo Papavassiliou,Hermann Joha
+95,10102,"Marcello Mastroianni , Ugo Tognazzi , Michel Piccoli",Marco Ferreri,Vincent Malle
+96,10103,"Jun Ji-hyun , Jang Hyuk , Kim Jung-tae",Kwak Jae-yong,William Kong
+97,10104,"James DeBello , Chris Owen , Gable Carr",David Hillenbrand,Sanford Hampton
+98,10105,"Corbin Allred , Alexander Polinsky , Kirby Heyborne",Ryan Little,Lawrence Bagby
+99,10107,"Josh Hutcherson , Bruce Greenwood , Bill Nunn",Todd Holland,Mike Werb
+100,10108,"Charles S. Dutton , Jay O. Sanders , Bobby Hosea",Tom McLoughlin,Tracey Jeffrey
+101,10109,"Cecilia Cheung , Avi K. Garg , Lei Liu",Wilson Yip,Tiffany Chen
+102,10110,"Christian Bale , John Malkovich , Miranda Richardson",Steven Spielberg,Steven Spielberg
+103,10111,"Martin Freeman , Jessica Hynes , Olivia Colman",Debbie Isitt,May Chu
+104,10112,"Phil Harris , Sterling Holloway , Scatman Crothers",Wolfgang Reitherman,Wolfgang Reitherman
+105,10113,"Darla Albornoz , Mark Lassise , Jacky Reres",Kevin Kangas,Kevin Kangas
+106,10114,"Gina Philips , Tom Sizemore , Randall Batinkoff",Rubi Zack,Lawrence Silverstein
+107,10115,"Jeff Bridges , Missy Peregrym , Vanessa Lengies",Jessica Bendinger,Gail Lyon
+108,10116,"Yukie Nakama , Joe Odagiri , Tomoka Kurotani",Ten Shimoyama,Nozomu Enoki
+109,10117,"Carl Weathers , Craig T. Nelson , Vanity",Craig R. Baxley,Joel Silver
+110,10118,"Hilary Duff , Haylie Duff , María Conchita Alonso",Martha Coolidge,Hilary Duff
+111,10119,"Julia Krohn , Bernhard Naglestad , Reidar Sørensen",Torun Lian,Anna Croneman
+112,10120,"Pamela Anderson , Denise Richards , Emmanuelle Vaugier",Bob Clark,Jeffrey Barmash
+113,10121,"Edward Furlong , Ellen Furey , Dylan Taylor",Robert Wilson,Kate Harrison Karman
+114,10122,"Joey Cramer , Paul Reubens , Veronica Cartwright",Randal Kleiser,Dimitri Villard
+115,10123,"François Goeske , Paula Schramm , Lennard Bertzbach",Christian Ditter,Jens Oberwetter
+116,10124,"Nathan Stephenson , James Binkley , Robert Englund",Bob Keen,Kate Harrison Karman
+117,10125,"Nina Violić , Olga Pakalović , Krešimir Mikić",Dalibor Matanić,Jozo Patljak
+118,10126,"Sean Penn , Robert Duvall , María Conchita Alonso",Dennis Hopper,Robert H. Solo
+119,10127,"Scott Grimes , Liane Curtis , Barry Corbin",Mick Garris,Barry Opper
+120,10128,"James Caan , Mandy Patinkin , Terence Stamp",Graham Baker,Gale Anne Hurd
+121,10129,"Dana Vávrová , Werner Stocker , Claude-Oliver Rudolph",Joseph Vilsmaier,Joseph Vilsmaier
+122,10130,"Sigourney Weaver , Bryan Brown , Julie Harris",Michael Apted,Arne Glimcher
+123,10131,"Robert Englund , Tuesday Knight , Ken Sagoes",Renny Harlin,Robert Shaye
+124,10132,"Eric Bogosian , Ellen Greene , Leslie Hope",Oliver Stone,A. Kitman Ho
+125,10133,"Jeremy Northam , Lucy Liu , Nigel Bennett",Vincenzo Natali,Hunt Lowry
+126,10134,"Jean-Claude Van Damme , Deborah Richter , Vincent Klyn",Albert Pyun,Menahem Golan
+127,10135,"Patrick Swayze , Kelly Lynch , Sam Elliott",Rowdy Herrington,Joel Silver
+128,10136,"Eddie Murphy , Charles Dance , Charlotte Lewis",Michael Ritchie,Robert D. Wachs
+129,10137,"Michael J. Fox , Geena Davis , Hugh Laurie",Rob Minkoff,Douglas Wick
+130,10138,"Robert Downey Jr. , Gwyneth Paltrow , Don Cheadle",Jon Favreau,Kevin Feige
+131,10139,"Sean Penn , Emile Hirsch , Josh Brolin",Gus Van Sant,Bruce Cohen
+132,10140,"Georgie Henley , Skandar Keynes , Ben Barnes",Michael Apted,Mark Johnson
+133,10141,"Steve Martin , Michael Caine , Glenne Headly",Frank Oz,Bernard Williams
+134,10142,"Michael J. Fox , Sean Penn , Don Harvey",Brian De Palma,Art Linson
+135,10144,"Jodi Benson , Samuel E. Wright , Pat Carroll",Ron Clements,John Musker
+136,10145,"Julianne Moore , Christopher Kovaleski , Matthew Pleszewicz",Joseph Ruben,Bruce Cohen
+137,10146,"Heiner Lauterbach , Uwe Ochsenknecht , Ulrike Kriener",Doris Dörrie,Elvira Senft
+138,10147,"Billy Bob Thornton , Tony Cox , Brett Kelly",Terry Zwigoff,Bob Weinstein
+139,10148,"Rosario Dawson , Nick Robinson , T.I.",William H. Macy,Tucker Tooley
+140,10149,"Harvey Keitel , William Hurt , Giancarlo Esposito",Wayne Wang,Peter Newman
+141,10150,"Alan Arkin , Jeff Bridges , Mia Farrow",Jules Bass,Jules Bass
+142,10151,"Stefan Gubser , Sunnyi Melles , Carlos Leal",Samir,Susann Rüdlinger
+143,10152,"Derek Richardson , Eric Christian Olsen , Mimi Rogers",Troy Miller,Oren Koules
+144,10153,"Dustin Hoffman , Sharon Stone , Samuel L. Jackson",Barry Levinson,Michael Crichton
+145,10154,"Hugh Grant , James Caan , Jeanne Tripplehorn",Kelly Makin,Charles Mulvehill
+146,10155,"Sean Penn , Nick Nolte , Jennifer Lopez",Oliver Stone,Richard Rutowski
+147,10156,"Mel Brooks , Dom DeLuise , Madeline Kahn",Mel Brooks,Mel Brooks
+148,10157,"Steve Guttenberg , Bubba Smith , David Graf",Jerry Paris,Paul Maslansky
+149,10158,"Wesley Snipes , Woody Harrelson , Rosie Perez",Ron Shelton,David V. Lester
+150,10159,"Dwayne Johnson , Seann William Scott , Rosario Dawson",Peter Berg,Marc Abraham
+151,10160,"Robert Englund , Lisa Wilcox , Erika Anderson",Stephen Hopkins,Robert Shaye
+152,10161,"Daniel Day-Lewis , Brenda Fricker , Alison Whelan",Jim Sheridan,Noel Pearson
+153,10162,"Ian Bannen , David Kelly , Fionnula Flanagan",Kirk Jones,Richard Holmes
+154,10163,"Jeff Fahey , Pierce Brosnan , Jenny Wright",Brett Leonard,Gimel Everett
+155,10164,"Robin Williams , Tim Robbins , Pamela Reed",Roger Donaldson,Charles Roven
+156,10165,"Frank Silvera , Kenneth Harp , Paul Mazursky",Stanley Kubrick,Stanley Kubrick
+157,10166,"Anjelica Huston , Mai Zetterling , Jasen Fisher",Nicolas Roeg,Mark Shivas
+158,10167,"Steven Seagal , Morris Chestnut , Ja Rule",Don Michael Paul,Elie Samaha
+159,10168,"Marlon Brando , Matthew Broderick , Bruno Kirby",Andrew Bergman,Mike Lobell
+160,10169,"Charlie Sheen , Emilio Estevez , Leslie Hope",Emilio Estevez,Cassian Elwes
+161,10170,"Sean Connery , Michelle Pfeiffer , Roy Scheider",Fred Schepisi,Paul Maslansky
+162,10171,"Sam Shepard , Julie Delpy , Barbara Sukowa",Volker Schlöndorff,Eberhard Junkersdorf
+163,10172,"Ice Cube , Nia Long , John C. McGinley",Steve Carr,Ice Cube
+164,10173,"Steven Seagal , Basil Wallace , Keith David",Dwight H. Little,Michael Grais
+165,10174,"Madonna , Al Pacino , Kevin Costner",Alek Keshishian,Tim Clawson
+166,10175,"Pietro Martellanza , Anja Gebel , Magdalena Ritter",Andreas Marschall,Olivera Becker
+167,10176,"Bruno Lawrence , Alison Routledge , Anzac Wallace",Geoff Murphy,Sam Pillsbury
+168,10177,"Emily Booth , Sam Butler , Jamie Honeybourne",Jake West,Tim Dennison
+169,10178,"Humphrey Bogart , José Ferrer , Van Johnson",Edward Dmytryk,Stanley Kramer
+170,10179,"Robert Urich , Mary Crosby , Michael D. Roberts",Stewart Raffill,John Foreman
+171,10180,"Søren Pilmark , Ulrich Thomsen , Mads Mikkelsen",Anders Thomas Jensen,Kim Magnusson
+172,10183,"Melissa Leo , Misty Upham , Charlie McDermott",Courtney Hunt,Heather Rae
+173,10184,"Jennifer Aniston , Drew Barrymore , Jennifer Connelly",Ken Kwapis,Nancy Juvonen
+174,10185,"Bradley Cooper , Vinnie Jones , Brooke Shields",Ryûhei Kitamura,Tom Rosenberg
+175,10186,"Rainn Wilson , Josh Gad , Christina Applegate",Peter Cattaneo,Shawn Levy
+176,10187,"Kevin Costner , Madeline Carroll , Paula Patton",Joshua Michael Stern,Kevin Costner
+177,10188,"Amber Tamblyn , America Ferrera , Blake Lively",Sanaa Hamri,Denise Di Novi
+178,10189,"Seth Rogen , James Franco , Gary Cole",David Gordon Green,Judd Apatow
+179,10190,"Summer Bishil , Aaron Eckhart , Toni Collette",Alan Ball,Alan Ball
+180,10191,"Jay Baruchel , Gerard Butler , Craig Ferguson",Chris Sanders,Bonnie Arnold
+181,10192,"Mike Myers , Eddie Murphy , Cameron Diaz",Mike Mitchell,Teresa Cheng
+182,10193,"Tom Hanks , Tim Allen , Joan Cusack",Lee Unkrich,John Lasseter
+183,10195,"Chris Hemsworth , Natalie Portman , Tom Hiddleston",Kenneth Branagh,Kevin Feige
+184,10196,"Noah Ringer , Dev Patel , Nicola Peltz",M. Night Shyamalan,Sam Mercer
+185,10197,"Daniel Day-Lewis , Marion Cotillard , Penélope Cruz",Rob Marshall,Harvey Weinstein
+186,10198,"Anika Noni Rose , Bruno Campos , Keith David",Ron Clements,Peter Del Vecho
+187,10199,"Matthew Broderick , Dustin Hoffman , Emma Watson",Robert Stevenhagen,Gary Ross
+188,10200,"Keanu Reeves , Jennifer Connelly , Jaden Smith",Scott Derrickson,Erwin Stoff
+189,10201,"Jim Carrey , Zooey Deschanel , Bradley Cooper",Peyton Reed,Richard D. Zanuck
+190,10202,"Adam Sandler , Keri Russell , Guy Pearce",Adam Shankman,Adam Sandler
+191,10204,"Jackie Chan , Steve Coogan , Cécile de France",Frank Coraci,Hal Lieberman
+192,10205,"Molly Ringwald , Frank Roberts , Kylie Minogue",Kimble Rendall,Bill Bennett
+193,10206,"Kristy Swanson , Donald Sutherland , Paul Reubens",Fran Rubel Kuzui,Howard Rosenman
+194,10207,"Kevin Costner , Robin Wright , Paul Newman",Luis Mandoki,Kevin Costner
+195,10208,"Steve Whitmire , Dave Goelz , Bill Barretta",Tim Hill,Ken Kaufman
+196,10209,"Kate Winslet , Saïd Taghmaoui , Bella Riza",Gillies MacKinnon,Marina Gefter
+197,10210,"Rupert Everett , Calista Flockhart , Kevin Kline",Michael Hoffman,Arnon Milchan
+198,10211,"Myriam Abbas , Dominique Horwitz , Oliver Breite",Andreas Dresen,Peter Rommel
+199,10212,"Guy Pearce , Robert Carlyle , David Arquette",Antonia Bird,Adam Fields
+200,10213,"Marco Leonardi , Temuera Morrison , Ara Celi",P.J. Pesce,Elizabeth Avellan
+201,10214,"Jamie Kennedy , Alan Cumming , Traylor Howard",Lawrence Guterman,Scott Kroopf
+202,10215,"Gwyneth Paltrow , John Hannah , John Lynch",Peter Howitt,Sydney Pollack
+203,10216,"Michael Madsen , Natasha Henstridge , Marg Helgenberger",Peter Medak,Frank Mancuso Jr.
+204,10217,"Ian Holm , Sarah Polley , Tom McCamus",Atom Egoyan,Atom Egoyan
+205,10218,"Vince Vaughn , Jon Favreau , Heather Graham",Doug Liman,Victor Simpkins
+206,10219,"Ethan Hawke , Yūki Kudō , Reeve Carney",Scott Hicks,Richard Vane
+207,10220,"Matt Damon , Edward Norton , John Turturro",John Dahl,Ted Demme
+208,10221,"Götz George , Corinna Harfouch , Tim Bergmann",Nico Hofmann,
+209,10222,"Jean-Claude Van Damme , Dennis Alexio , Dennis Chan Kwok-San",David Worth,Mark DiSalle
+210,10223,"Bill Paxton , Bridget Fonda , Billy Bob Thornton",Sam Raimi,Gary Levinsohn
+211,10224,"Dennis Hopper , Heino Ferch , Katja Flint",Thomas Bohn,
+212,10225,"Thom Mathews , Jennifer Cooke , David Kagen",Tom McLoughlin,
+213,10226,"Cécile de France , Maïwenn , Philippe Nahon",Alexandre Aja,Robert Benmussa
+214,10227,"Jacques Tati , Barbara Dennek , Rita Maiden",Jacques Tati,Bernard Maurice
+215,10228,"Rica Matsumoto , Ikue Otani , Mayumi Iizuka",Kunihiko Yuyama,Choji Yoshikawa
+216,10229,"Mandy Moore , Shane West , Peter Coyote",Adam Shankman,Denise Di Novi
+217,10231,"Jane Russell , Jeff Chandler , Dan Duryea",Joseph Pevney,Aaron Rosenberg
+218,10232,"Ingrid Caven , Rainer Werner Fassbinder , Klaus Löwitsch",Daniel Schmid,
+219,10234,"Ulrich Mühe , Susanne Lothar , Arno Frisch",Michael Haneke,Veit Heiduschka
+220,10235,"Nikolai Cherkasov , Nikolai Okhlopkov , Andrei Abrikosov",Sergei Eisenstein,
+221,10236,"Barbra Streisand , Robert Redford , Bradford Dillman",Sydney Pollack,Ray Stark
+222,10237,"Shirley Stoler , Tony Lo Bianco , Mary Jane Higby",Leonard Kastle,Warren Steibel
+223,10238,"Harriet Andersson , Ingrid Thulin , Kari Sylwan",Ingmar Bergman,Ingmar Bergman
+224,10239,"Marie Rivière , Béatrice Romand , Alain Libolt",Éric Rohmer,Françoise Etchegaray
+225,10241,"Charlotte Véry , Frédéric van den Driessche , Michel Voletti",Éric Rohmer,Margaret Ménégoz
+226,10242,"Bette Davis , Joan Crawford , Victor Buono",Robert Aldrich,Robert Aldrich
+227,10243,"James Stewart , Richard Attenborough , Peter Finch",Robert Aldrich,Robert Aldrich
+228,10244,"Harry Baer , Hanna Schygulla , Margarethe von Trotta",Rainer Werner Fassbinder,Rainer Werner Fassbinder
+229,10246,"Dan Monahan , Mark Herrier , Wyatt Knight",Bob Clark,Don Carmody
+230,10247,"Christian Slater , Elisha Cuthbert , William H. Macy",Frank A. Cappello,Frank A. Cappello
+231,10248,"Gwendolyn Rich , Edward Piccin , Leo Roos",Mark Schippert,Dominik Kaiser
+232,10249,"Timothy Dalton , Alan Arkin , Billy Campbell",Joe Johnston,Lawrence Gordon
+233,10250,"Hazel Dean , Myiea Coy , Bill Jacobson",Edward Gorsuch,Michael Feifer
+234,10251,"Ron Perlman , Amy Lalonde , Terra Vnesa",Warren P. Sonoda,Kate Harrison Karman
+235,10252,"Ving Rhames , Terrence Howard , Jim Brown",David J. Burke,Kip Konwiser
+236,10253,"Jason Behr , Amanda Brooks , Robert Forster",Sim Hyeong-Rae,James B. Kang
+237,10254,"Dan Chupong , Nappon Gomarachun , Santisuk Promsiri",Panna Rittikrai,Prachya Pinkaew
+238,10255,"Rosanne Wong , Race Wong , Anson Leung",Oxide Pang Chun,Danny Pang
+239,10256,"Christopher Lambert , Corey Sevier , Charlie Hollway",Jenő Hódi,Adrian Politowski
+240,10257,"Donnie Yen , Charlene Choi , Gillian Chung",Corey Yuen Kwei,Albert Lee
+241,10258,"Tom McGrath , Chris Miller , Christopher Knights",Gary Trousdale,Teresa Cheng
+242,10259,"Cho Jae-hyun , Kim Ji-soo , Jang Hyun-sung",Moon Seung-wook,
+243,10260,"Philippe Noiret , Thierry Lhermitte , Régine",Claude Zidi,
+244,10261,"Ellen Barkin , Jimmy Smits , JoBeth Williams",Blake Edwards,Tony Adams
+245,10263,"Jenna Dewan , Marc Devigne , Chad Faust",Jeremy Haft,Chris Sievernich
+246,10264,"Mel Gibson , Glenn Close , Alan Bates",Franco Zeffirelli,Dyson Lovell
+247,10265,"Tony Leung Chiu-wai , Richie Ren Xian-Qi , Shu Qi",Jingle Ma Choh-Sing,Shoufang Dou
+248,10266,"Ally Sheedy , Bobby Hosea , Michael Ironside",Sidney J. Furie,Curtis Petersen
+249,10267,"Gabi Herz , Carolin Engel , Anna Griesbracher",Helke Sander,Susanne Schläpfer
+250,10268,"Michel Blanc , Medeea Marinescu , Wladimir Yordanoff",Isabelle Mergault,Jean-Louis Livi
+251,10269,"Barbra Streisand , Mandy Patinkin , Amy Irving",Barbra Streisand,Barbra Streisand
+252,10270,"Mathis Landwehr , Esther Schweins , Volkram Zschiesche",Johannes Jaeger,Hermann Joha
+253,10271,"Edouard Baer , Clovis Cornillac , Marie-Josée Croze",Laurent Tirard,Luc Besson
+254,10272,"Bryan Fisher , Bree Turner , Zachary Bennett",Nick Stillwell,Paolo Bugliari Goggia
+255,10273,"Pascale Ourbih , Laurent Schilling , Michele Valley",Pierre-Alain Meier,Xavier Grin
+256,10274,"Christian Slater , Selma Blair , Robert Loggia",Harvey Kahn,Robert Lee
+257,10275,"Jet Li , Yue Hoi , Yu Cheng-Hui",Cheung Yam-Yim,Liao Yi-Yuan
+258,10276,"Bill Murray , Richard Dreyfuss , Julie Hagerty",Frank Oz,Bernard Williams
+259,10278,"Vince Vaughn , Anne Heche , Joaquin Phoenix",Joseph Ruben,Steve Golin
+260,10279,"John Leguizamo , Adrien Brody , Mira Sorvino",Spike Lee,Jon Kilik
+261,10280,"Robert John Burke , Lucinda Jenney , Bethany Joy Lenz",Tom Holland,Richard P. Rubinstein
+262,10281,"Kane Hodder , Lar Park Lincoln , Kevin Spirtas",John Carl Buechler,Frank Mancuso Jr.
+263,10282,"Bernd Michael Lade , Julia Jäger , Inga Busch",Detlev Buck,Claus Boje
+264,10283,"Jensen Daggett , Scott Reeves , Kane Hodder",Rob Hedden,Barbara Sachs
+265,10285,"Kane Hodder , John D. LeMay , Kari Keegan",Adam Marcus,Sean S. Cunningham
+266,10286,"Hafsia Herzi , Farida Khelfa , Maher Kamoun",Souad El-Bouhati,Jacques Kirsner
+267,10287,"Miou-Miou , Valeria Bruni‑Tedeschi , Lambert Wilson",Pascal Bonitzer,Saïd Ben Saïd
+268,10288,"Billy Connolly , Carrie-Anne Moss , Dylan Baker",Andrew Currie,Heidi Levitt
+269,10289,"Daniel Auteuil , Juliette Lamboley , François Damiens",François Desagnat,Patrice Ledoux
+270,10291,"Guillermo Arengo , Ana Celentano , Marina Glezer",Sandra Gugliotta,
+271,10292,"Kate Mara , Robert Vito , Tina Lifford",Mary Lambert,Matt Bierman
+272,10293,"Amanda Langlet , Arielle Dombasle , Pascal Greggory",Éric Rohmer,Margaret Ménégoz
+273,10294,"Kate Beckinsale , Luke Wilson , Ethan Embry",Nimród Antal,Hal Lieberman
+274,10295,"Terence Hill , Bud Spencer , C.B. Seay",Bruno Corbucci,Josi W. Konski
+275,10296,"Danny Dyer , Neil Maskell , Frank Harper",Nick Love,James Richardson
+276,10297,"Lauren Bacall , Marilyn Monroe , Betty Grable",Jean Negulesco,Nunnally Johnson
+277,10299,"Bette Davis , Olivia de Havilland , Joseph Cotten",Robert Aldrich,Robert Aldrich
+278,10300,"Luigi Jacuzio , Ernesto Mahieux , Maria Pia Calzone",Francesco Patierno,Umberto Massa
+279,10301,"Luigi Jacuzio , Nino D'Angelo , Riccardo Zinna",Toni D'Angelo,
+280,10303,"Michael Douglas , Kathleen Turner , Danny DeVito",Lewis Teague,Michael Douglas
+281,10304,"Billy Brown , Richard Burgi , Kelly Carlson",Phil Tippett,Edward Neumeier
+282,10305,"Isabelle Huppert , Jacques Dutronc , Anna Mouglalis",Claude Chabrol,Marin Karmitz
+283,10306,"Tom Skerritt , Nancy Allen , Heather O'Rourke",Gary Sherman,Barry Bernardi
+284,10307,"Patricia Arquette , Gabriel Byrne , Jonathan Pryce",Rupert Wainwright,Frank Mancuso Jr.
+285,10308,"Lilith Ungerer , Kurt Raab , Lilo Pempeit",Rainer Werner Fassbinder,
+286,10309,"Hans Hirschmüller , Irm Hermann , Hanna Schygulla",Rainer Werner Fassbinder,
+287,10310,"Margit Carstensen , Hanna Schygulla , Katrin Schaake",Rainer Werner Fassbinder,Rainer Werner Fassbinder
+288,10311,"Karlheinz Böhm , Margit Carstensen , Barbara Valentin",Rainer Werner Fassbinder,Peter Märthesheimer
+289,10312,"Robin Williams , Philip Seymour Hoffman , Bob Gunton",Tom Shadyac,Barry Kemp
+290,10313,"George Clooney , Ewan McGregor , Jeff Bridges",Grant Heslov,George Clooney
+291,10314,"Freddie Prinze Jr. , Rachael Leigh Cook , Paul Walker",Robert Iscove,Richard N. Gladstein
+292,10315,"George Clooney , Meryl Streep , Jason Schwartzman",Wes Anderson,Scott Rudin
+293,10316,"George Clooney , Ryan Gosling , Philip Seymour Hoffman",George Clooney,George Clooney
+294,10317,"Sandra Bullock , Anthony Mackie , Billy Bob Thornton",David Gordon Green,George Clooney
+295,10319,"Klaus Kinski , Eva Mattes , Wolfgang Reichmann",Werner Herzog,Joschi Arpa
+296,10320,"Naomi Watts , Simon Baker , Elizabeth Perkins",Hideo Nakata,Walter F. Parkes
+297,10322,"Peter Sellers , Shirley MacLaine , Melvyn Douglas",Hal Ashby,Charles Mulvehill
+298,10323,"Harry Hamlin , Laurence Olivier , Claire Bloom",Desmond Davis,Ray Harryhausen
+299,10324,"Sarah Jessica Parker , Eric Schaeffer , Ben Stiller",Eric Schaeffer,Brad Krevoy
+300,10326,"Mel Gibson , Jamie Lee Curtis , Elijah Wood",Steve Miner,Bruce Davey
+301,10327,"Reese Witherspoon , Sally Field , Regina King",Charles Herman-Wurmfeld,Marc Platt
+302,10328,"Steve Guttenberg , Tahnee Welch , Brian Dennehy",Ron Howard,Richard D. Zanuck
+303,10329,"Laura Linney , Dylan Walsh , Ernie Hudson",Frank Marshall,Sam Mercer
+304,10330,"Lindsay Lohan , Jamie Lee Curtis , Mark Harmon",Mark Waters,Andrew Gunn
+305,10331,"Duane Jones , Judith O'Dea , Karl Hardman",George A. Romero,Russell Streiner
+306,10333,"Nick Nolte , Barbra Streisand , Blythe Danner",Barbra Streisand,Barbra Streisand
+307,10335,"Catalina Sandino Moreno , Sienna Guillory , Philip Winchester",Antonio Cuadri,
+308,10336,"Michael Jai White , Martin Sheen , John Leguizamo",Mark A.Z. Dippé,Clint Goldman
+309,10337,"Warren Beatty , Annette Bening , Harvey Keitel",Barry Levinson,Barry Levinson
+310,10338,"Stuart Whitman , Sarah Miles , James Fox",Ken Annakin,Stan Margulies
+311,10339,"Gregory Peck , Richard Basehart , Leo Genn",John Huston,John Huston
+312,10340,"Barbara Luddy , Larry Roberts , Peggy Lee",Hamilton Luske,Walt Disney
+313,10341,"William Hurt , Solveig Dommartin , Chick Ortega",Wim Wenders,Jonathan T. Taplin
+314,10342,"Helen Mirren , Katie Holmes , Jeffrey Tambor",Kevin Williamson,Paul Hellerman
+315,10344,"Eric Stoltz , Daphne Zuniga , Lee Richardson",Chris Walas,Steven-Charles Jaffe
+316,10345,"Jim Belushi , Mel Harris , Kevin Tighe",Rod Daniel,Lawrence Gordon
+317,10347,"Vincent Cassel , Tchéky Karyo , Monica Bellucci",Jan Kounen,Éric Névé
+318,10348,"Jackie Chan , Anita Yuen , Michael Wong Man-Tak",Gordon Chan,Jackie Chan
+319,10349,"Timothy Hutton , Amy Madigan , Michael Rooker",George A. Romero,Declan Baldwin
+320,10350,"Freddie Prinze Jr. , Saffron Burrows , Matthew Lillard",Christopher Roberts,Donna Burkons
+321,10351,"Angus Scrimm , Andrew Divoff , Tammy Lauren",Robert Kurtzman,Clark Peterson
+322,10353,"Christian Clavier , Jean Reno , Marie-Anne Chazel",Jean-Marie Poiré,Alain Terzian
+323,10354,"Clint Eastwood , Isaiah Washington , LisaGay Hamilton",Clint Eastwood,Clint Eastwood
+324,10355,"Han Suk-kyu , Choi Min-sik , Yunjin Kim",Kang Je-gyu,Byun Moo-Rim
+325,10356,"Christian Slater , Molly Parker , Stephen Rea",Lewin Webb,Gary Howsam
+326,10357,"Tommy Lee Jones , Anne Heche , Gaby Hoffmann",Mick Jackson,Neal H. Moritz
+327,10358,"Seth Rogen , Elizabeth Banks , Craig Robinson",Kevin Smith,Scott Mosier
+328,10359,"Christopher Lambert , Leland Orser , Barbara Tyson",Russell Mulcahy,Christopher Lambert
+329,10360,"Michael Fassbender , Stuart Graham , Liam Cunningham",Steve McQueen,Robin Gutch
+330,10361,"Emily Perkins , Tatiana Maslany , Katharine Isabelle",Brett Sullivan,Steven Hoban
+331,10362,"Joaquin Phoenix , Gwyneth Paltrow , Vinessa Shaw",James Gray,Donna Gigliotti
+332,10363,"Alain Delon , Maurice Ronet , Marie Laforêt",René Clément,Raymond Hakim
+333,10364,"Alan Arkin , Martin Balsam , Richard Benjamin",Mike Nichols,Martin Ransohoff
+334,10366,"Jean-Claude Van Damme , Kiana Tom , Bill Goldberg",Mic Rodgers,Craig Baumgarten
+335,10367,"Susan Ward , Leila Arcieri , Isaiah Washington",Jack Perez,Marc Bienstock
+336,10368,"Joan Plowright , Maggie Smith , Cher",Franco Zeffirelli,Clive Parsons
+337,10369,"Kai Wiesinger , Michael Mendl , Katharina Meinecke",Roland Suso Richter,
+338,10370,"Christopher Stacey , Ingid Fischer , Olaf Ittenbach",Olaf Ittenbach,Olaf Ittenbach
+339,10371,"Tim Allen , Kirstie Alley , Wayne Knight",Bryan Spicer,Michael S. Glick
+340,10372,"Wilford Brimley , Warwick Davis , Aubree Miller",Jim Wheat,George Lucas
+341,10373,"Phil Daniels , Leslie Ash , Phil Davis",Franc Roddam,Roy Baird
+342,10374,"Herbert Knaup , Corinna Harfouch , Richy Müller",Sherry Hormann,Kirsten Hager
+343,10375,"Sylvester Stallone , Charles S. Dutton , Polly Walker",Jim Gillespie,Karen Kehela Sherwood
+344,10376,"Tim Roth , Pruitt Taylor Vince , Mélanie Thierry",Giuseppe Tornatore,
+345,10377,"Joe Pesci , Ralph Macchio , Marisa Tomei",Jonathan Lynn,Dale Launer
+346,10378,"None , None , None",Sacha Goedegebure,Ton Roosendaal
+347,10379,"Phoebe Cates , Rik Mayall , Marsha Mason",Ate de Jong,Paul Webster
+348,10380,"Phillip Glasser , James Stewart , Erica Yohn",Simon Wells,Steven Spielberg
+349,10381,"Jonny Lee Miller , Robert Carlyle , Liv Tyler",Jake Scott,Tim Bevan
+350,10383,"Winona Ryder , Ben Chaplin , Sarah Wynter",Janusz Kamiński,Meg Ryan
+351,10384,"James Spader , Angela Bassett , Robert Forster",Walter Hill,Ash R. Shah
+352,10385,"Lisa Kudrow , Meg Ryan , Diane Keaton",Diane Keaton,Nora Ephron
+353,10386,"Jennifer Aniston , Harry Connick Jr. , Vin Diesel",Brad Bird,Allison Abbate
+354,10387,"Gong Li , Zhang Fengyi , Sun Zhou",Chen Kaige,
+355,10388,"Terence Stamp , Lesley Ann Warren , Luis Guzmán",Steven Soderbergh,John Hardy
+356,10389,"Angelica Lee , Lawrence Chou , Chutcha Rujinanon",Danny Pang,Eric Tsang
+357,10390,"Kevin Costner , Kelly Preston , John C. Reilly",Sam Raimi,Amy Robinson
+358,10391,"Kim Basinger , Angela Bettis , Holliston Coleman",Chuck Russell,Mace Neufeld
+359,10392,"Wolfgang Völz , Edgar Hoppe , Helge Schneider",Hayo Freitag,Michael Schaack
+360,10393,"Keanu Reeves , Gene Hackman , Brooke Langton",Howard Deutch,Dylan Sellers
+361,10394,"Paul Bettany , Malcolm McDowell , David Thewlis",Paul McGuigan,Jonathan Cavendish
+362,10395,"Jack Nicholson , Michelle Pfeiffer , Christopher Plummer",Mike Nichols,Douglas Wick
+363,10396,"Mel Gibson , Michelle Pfeiffer , Kurt Russell",Robert Towne,Thom Mount
+364,10397,"Emily Watson , Robert Carlyle , Joe Breen",Alan Parker,Scott Rudin
+365,10398,"Tommy Lee Jones , Ashley Judd , Bruce Greenwood",Bruce Beresford,Leonard Goldberg
+366,10399,"Frances O'Connor , Lindsay Duncan , James Purefoy",Patricia Rozema,Sarah Curtis
+367,10400,"Denzel Washington , Vicellous Reon Shannon , Deborah Kara Unger",Norman Jewison,Norman Jewison
+368,10401,"Vanessa Paradis , Daniel Auteuil , Demetre Georgalas",Patrice Leconte,Christian Fechner
+369,10402,"Rob Schneider , William Forsythe , Eddie Griffin",Mike Mitchell,Barry Bernardi
+370,10403,"Tim Robbins , Greta Scacchi , Fred Ward",Robert Altman,David Brown
+371,10404,"Gong Li , Ma Jingwu , He Saifei",Zhang Yimou,Chiu Fu-Sheng
+372,10406,"Brendan Fraser , Pauly Shore , Sean Astin",Les Mayfield,George Zaloom
+373,10407,"Steve Martin , Goldie Hawn , Dana Delany",Frank Oz,Brian Grazer
+374,10408,"Huub Stapel , Nelly Frijda , Tatjana Simić",Dick Maas,Dick Maas
+375,10409,"Paul Mercurio , Tara Morice , Bill Hunter",Baz Luhrmann,Tristram Miall
+376,10410,"Jack Nicholson , Danny DeVito , Armand Assante",Danny DeVito,Danny DeVito
+377,10411,"Eddie Murphy , Lane Smith , Sheryl Lee Ralph",Jonathan Lynn,Leonard Goldberg
+378,10412,"Russell Crowe , Daniel Pollock , Jacqueline McKenzie",Geoffrey Wright,Ian Pringle
+379,10413,"Jean-Claude Van Damme , Rosanna Arquette , Kieran Culkin",Robert Harmon,Gary Adelson
+380,10414,"Emilio Estevez , Joss Ackland , Lane Smith",Stephen Herek,Jon Avnet
+381,10415,"Katja Flint , Herbert Knaup , Heino Ferch",Joseph Vilsmaier,Joseph Vilsmaier
+382,10416,"Garry Shandling , Annette Bening , John Goodman",Mike Nichols,Mike Nichols
+383,10417,"Sebastian Koch , Ulrich Tukur , Hardy Krüger Jr.",Jo Baier,Bettina Ricklefs
+384,10418,"Matthias Schweighöfer , Teresa Weißbach , Robert Dölle",Martin Weinhart,Uschi Reich
+385,10419,"Robert Sean Leonard , Christian Bale , Frank Whaley",Thomas Carter,Mark Gordon
+386,10420,"Mirjana Karanović , Andrea Zogg , Marija Škaričić",Andrea Štaka,Samir
+387,10421,"Yvette Etiévant , Michel Galabru , Michel Isella",Yves Robert,Danièle Delorme
+388,10422,"Katja Riemann , Nina Kronjäger , Gedeon Burkhard",Katja von Garnier,Ewa Karlström
+389,10423,"Jason Scott Lee , Lauren Holly , Robert Wagner",Rob Cohen,Raffaella De Laurentiis
+390,10424,"Andy García , Lance Henriksen , Uma Thurman",Bruce Robinson,Gary Lucchesi
+391,10425,"Paul Walker , Laurence Fishburne , Olivia Wilde",John Herzfeld,Paul Walker
+392,10426,"Ice Cube , Mike Epps , John Witherspoon",Marcus Raboy,Ice Cube
+393,10427,"Nicolas Cage , Dennis Hopper , Lara Flynn Boyle",John Dahl,Steve Golin
+394,10428,"Jonny Lee Miller , Angelina Jolie , Jesse Bradford",Iain Softley,Ralph Winter
+395,10429,"Skeet Ulrich , Angela Featherstone , Donal Logue",Joe Chappelle,John Thompson
+396,10431,"Jet Li , Jason Statham , John Lone",Philip G. Atwell,Steve Chasman
+397,10432,"Danica McKellar , Jay Kenneth Johnson , William Forsythe",Matt Flynn,Kim Eva Matuka
+398,10433,"Robert De Niro , Uma Thurman , Bill Murray",John McNaughton,Martin Scorsese
+399,10434,"Otto Sander , Bruno Ganz , Nastassja Kinski",Wim Wenders,Wim Wenders
+400,10435,"Robert Downey Jr. , Geraldine Chaplin , Paul Rhys",Richard Attenborough,Mario Kassar
+401,10436,"Daniel Day-Lewis , Michelle Pfeiffer , Winona Ryder",Martin Scorsese,Barbara De Fina
+402,10437,"Michael Caine , Dave Goelz , Steve Whitmire",Brian Henson,Martin G. Baker
+403,10438,"Charles Grodin , Bonnie Hunt , Nicholle Tom",Rod Daniel,Michael C. Gross
+404,10439,"Bette Midler , Sarah Jessica Parker , Kathy Najimy",Kenny Ortega,Steven Haft
+405,10440,"Woody Allen , Diane Keaton , Jerry Adler",Woody Allen,Robert Greenhut
+406,10442,"Mike Myers , Nancy Travis , Anthony LaPaglia",Thomas Schlamme,Cary Woods
+407,10443,"Jeff Bridges , Isabella Rossellini , Rosie Perez",Peter Weir,Paula Weinstein
+408,10444,"Gert Fröbe , Senta Berger , Helmut Schmid",Werner Klingler,Artur Brauner
+409,10445,"Anthony Hopkins , Debra Winger , John Wood",Richard Attenborough,Richard Attenborough
+410,10446,"John Rhys-Davies , Rick Overton , Michael Des Barres",Klaus Knoesel,Thomas Wöbke
+411,10447,"Ray Liotta , Lance Henriksen , Stuart Wilson",Martin Campbell,Gale Anne Hurd
+412,10448,"Jason Scott Lee , Esai Morales , Sandrine Holt",Kevin Reynolds,Kevin Costner
+413,10449,"Andy García , Meg Ryan , Tina Majorino",Luis Mandoki,Jon Avnet
+414,10450,"Ezio Greggio , Dom DeLuise , Billy Zane",Ezio Greggio,Ezio Greggio
+415,10451,"Sihung Lung , Yang Kuei-Mei , Wu Chien-Lien",Ang Lee,Kong Hsu
+416,10452,"Isabelle Adjani , Daniel Auteuil , Jean-Hugues Anglade",Patrice Chéreau,Claude Berri
+417,10458,"Joachim Król , Nadja Uhl , Christian Berkel",Mennan Yapo,Tom Tykwer
+418,10461,"Sylvester Stallone , Miranda Richardson , Rachael Leigh Cook",Stephen T. Kay,Neil Canton
+419,10462,"Ed Herlihy , Josef Sommer , Robert Stanton",Woody Allen,Robert Greenhut
+420,10463,"Laura Tonke , Stefan Cammann , Gustaw Barwicki",Michael Klier,Michael Klier
+421,10464,"Whoopi Goldberg , Ray Liotta , Tina Majorino",Jessie Nelson,Steve Tisch
+422,10466,"Tom Hanks , Shelley Long , Alexander Godunov",Richard Benjamin,Kathleen Kennedy
+423,10467,"Anthony Hopkins , Bridget Fonda , Matthew Broderick",Alan Parker,Robert F. Colesberry
+424,10468,"Sandra Bullock , Viggo Mortensen , Dominic West",Betty Thomas,Celia D. Costas
+425,10469,"Josef Hader , Simon Schwarz , Barbara Rudnik",Wolfgang Murnberger,Danny Krausz
+426,10470,"Klaus Büchner , Andi Feldmann , Otto Sander",Michael Schaack,Bernd Eichinger
+427,10471,"Ice Cube , Mike Epps , Justin Pierce",Steve Carr,
+428,10472,"Freddie Prinze Jr. , Julia Stiles , Selma Blair",Kris Isacsson,Jason Kliot
+429,10473,"Christopher Masterson , Harry Van Gorkum , Rona Figueroa",Doug Lefler,
+430,10474,"Leonardo DiCaprio , Lorraine Bracco , James Madio",Scott Kalvert,John Bard Manulis
+431,10475,"Matt Dillon , Lili Taylor , Marisa Tomei",Bent Hamer,Jim Stark
+432,10476,"Terrence Howard , Anthony Anderson , Taryn Manning",Craig Brewer,John Singleton
+433,10477,"Sylvester Stallone , Burt Reynolds , Kip Pardue",Renny Harlin,Sylvester Stallone
+434,10478,"Kevin Costner , Rene Russo , Don Johnson",Ron Shelton,David V. Lester
+435,10479,"Tommy Lee Jones , Samuel L. Jackson , Guy Pearce",William Friedkin,Richard D. Zanuck
+436,10480,"Renée Zellweger , Morgan Freeman , Chris Rock",Neil LaBute,Steve Golin
+437,10481,"Glenn Close , Ioan Gruffudd , Alice Evans",Kevin Lima,Edward S. Feldman
+438,10482,"Rik Mayall , Adrian Edmondson , Bill Nighy",Adrian Edmondson,Phil McIntyre
+439,10483,"Jason Statham , Joan Allen , Ian McShane",Paul W. S. Anderson,Paul W. S. Anderson
+440,10484,"Pierre Richard , Gérard Depardieu , Anny Duperey",Francis Veber,Gérard Depardieu
+441,10485,"Bill Cosby , Kimberly Russell , Denise Nicholas",Sidney Poitier,Terence Nelson
+442,10486,"Gérard Depardieu , Katherine Heigl , Dalton James",Steve Miner,
+443,10487,"Werner Enke , Uschi Glas , Henry van Lyck",May Spils,Peter Schamoni
+444,10488,"Abigail Breslin , Jodie Foster , Gerard Butler",Jennifer Flackett,Paula Mazur
+445,10489,"Dee Wallace , Danny Pintauro , Daniel Hugh Kelly",Lewis Teague,Daniel H. Blatt
+446,10490,"Kirsten Dunst , Ellen Barkin , Denise Richards",Michael Patrick Jann,Gavin Polone
+447,10491,"Dougray Scott , Kate Winslet , Saffron Burrows",Michael Apted,Mick Jagger
+448,10492,"Valerie Niehaus , Xaver Hutter , Alexandra Neldel",Michael Karen,Rikolt von Gagern
+449,10493,"Nicole Kidman , Sam Neill , Billy Zane",Phillip Noyce,Terry Hayes
+450,10494,"Junko Iwao , Rica Matsumoto , Shinpachi Tsuji",Satoshi Kon,Hiroaki Inoue
+451,10495,"Ralph Macchio , Pat Morita , Robyn Lively",John G. Avildsen,Jerry Weintraub
+452,10496,"Lou Diamond Phillips , Dina Meyer , Bob Gunton",Louis Morneau,Louise Rosner-Meyer
+453,10497,"Hugh Grant , Kristin Scott Thomas , Emmanuelle Seigner",Roman Polanski,Roman Polanski
+454,10498,"Bridget Fonda , Gabriel Byrne , Dermot Mulroney",John Badham,Art Linson
+455,10499,"Bibiana Beglau , Nadja Uhl , Martin Wuttke",Volker Schlöndorff,Arthur Hofer
+456,10500,"Hannelore Elsner , Vadim Glowna , Michael Gwisdek",Oskar Roehler,Ulrich Caspar
+457,10501,"Kenneth Branagh , Kevin Kline , Rosie Perez",Bibo Bergeron,Brooke Breton
+458,10502,"Mel Gibson , Nick Stahl , Margaret Whitton",Mel Gibson,Bruce Davey
+459,10503,"Sally Hawkins , Alexis Zegerman , Eddie Marsan",Mike Leigh,Simon Channing Williams
+460,10505,"Max Riemelt , Jasmin Schwiers , Uwe Ochsenknecht",Adnan Köse,Fritjof Hohagen
+461,10506,"Maria Bethânia , Caetano Veloso , Gilberto Gil",Georges Gachot,Georges Gachot
+462,10507,"None , None , None",Gerd Kroske,Gerd Kroske
+463,10509,"Ilya Van Malderghem , Filip Peeters , Joke Devynck",Jan Verheyen,Dirk Impens
+464,10510,"Richard Attenborough , Dylan McDermott , Mara Wilson",Les Mayfield,John Hughes
+465,10511,"Paddy Considine , Samantha Morton , Sarah Bolger",Jim Sheridan,Arthur Lappin
+466,10513,"Gregory Walcott , Mona McKinnon , Duke Moore",Edward D. Wood Jr.,Edward D. Wood Jr.
+467,10514,"Arthur Hill , David Wayne , James Olson",Robert Wise,Robert Wise
+468,10515,"Keiko Yokozawa , Mayumi Tanaka , Minori Terada",Hayao Miyazaki,Isao Takahata
+469,10516,"Louis de Funès , Michel Galabru , Maurice Risch",Jean Girault,Gérard Beytout
+470,10518,"Dustin Hoffman , Laurence Olivier , Roy Scheider",John Schlesinger,Robert Evans
+471,10519,"Ulrich Noethen , Sebastian Koch , Piet Klocke",Tomy Wigand,Christoph Holch
+472,10520,"Melonie Diaz , Nicole Vicius , Guinevere Turner",Jamie Babbit,Andrea Sperling
+473,10521,"Kate Hudson , Anne Hathaway , Bryan Greenberg",Gary Winick,Kate Hudson
+474,10523,"Josh Brolin , Elizabeth Banks , Toby Jones",Oliver Stone,Moritz Borman
+475,10524,"Sophie Marceau , Christopher Lambert , Nicolas Briançon",Sophie Marceau,Ariane Guez
+476,10525,"Billy Crystal , Debra Winger , Joe Mantegna",Billy Crystal,Billy Crystal
