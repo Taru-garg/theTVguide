@@ -116,3 +116,22 @@ body {
     height: 80%;
     object-fit: contain;
   }
+
+  .backdrop_container {
+    list-style-type: none;
+  }
+
+  .backdrop img {
+    width: 1500px;
+    height: 500px;
+    object-fit: fill;
+    margin: 30px auto;
+    margin-right: 30px;
+  }
+  @media (max-width: 1200px) {
+    .backdrop img {
+      width: 900px;
+      height: 350px;
+      object-fit: fill;
+    } 
+  }

@@ -1,6 +1,13 @@
 from flask import Flask, render_template, request, jsonify, redirect
+from flask.templating import render_template_string
 from utility import searchCleaning
 app = Flask(__name__)
+
+@app.route('/movie/<id>')
+def movie(id):
+    print(id)
+    return render_template('movie.html')
+
 
 @app.route('/search', methods=['POST'])
 def searchInput():
