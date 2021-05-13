@@ -1,5 +1,18 @@
 import pandas as pd
+import string
 
+def clean_text(text):
+    text = str(text)
+    text = text.replace(u'"','')
+    text = text.replace(u"‘‘",'')
+    text = text.replace(u"’’",'')
+    text = text.replace(u"''",'')
+    text=text.replace(u"'",'')
+    text=text.replace(u"-",'')
+    text=text.replace(u"\\",'')
+    text=text.replace(u"_",'')
+    text=text.strip()
+    return text
 
 def createInsertQueryGenres(filename):
     # Read the Data from the file provided
@@ -38,7 +51,8 @@ def createInsertQueryMovies(filename):
             if pd.isnull(Movie_data[j][i]):
                 values += "NULL,"
             else:
-                values += f"'{Movie_data[j][i]}',"
+                cleaned_value = clean_text(Movie_data[j][i]) 
+                values += f"'{cleaned_value}',"
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
