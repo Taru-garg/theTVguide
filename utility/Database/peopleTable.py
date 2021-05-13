@@ -2,11 +2,11 @@ import numpy as np
 import pandas as pd
 
 
-def formatActorColumn(filepath):
+def formatColumn(filepath, column):
     file = pd.read_csv(filepath)
     # Reading names of all the actors
     # Currently Unformatted
-    cast = file["Cast"]
+    cast = file[column]
 
     # Formatting the Cast Column
     # further we only need unique names
@@ -23,7 +23,7 @@ def formatActorColumn(filepath):
 
 
 def createInsertQueryActor(filepath):
-    cast = formatActorColumn(filepath)
+    cast = formatColumn(filepath, 'Cast')
 
     # Base statement
     statement = "INSERT INTO ACTOR VALUES "
@@ -41,7 +41,27 @@ def createInsertQueryActor(filepath):
             file.write(InsertQuery)
         actId = actId + 1
 
+def createInsertQueryDirector(filepath):
+    Directors = formatColumn(filepath, 'Director')
+
+    # Base statement
+    statement = "INSERT INTO DIRECTOR VALUES "
+
+    dirId = 1
+    for people in Directors:
+        name = people.split(' ', 1)
+        if len(name) > 1:
+            InsertQuery = statement + f"({dirId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
+        
+        # This step has to be done as sometimes actor might not have a last name
+        else :
+            InsertQuery = statement + f"({dirId}, '{name[0]}', NULL, NULL, NULL);\n"
+        with open("utility/Database/directorTable.sql", "a+") as file:
+            file.write(InsertQuery)
+        dirId = dirId + 1
+
 
 if __name__ == "__main__":
     file = input("Enter file Path: ")
     createInsertQueryActor(file)
+    createInsertQueryDirector(file)
