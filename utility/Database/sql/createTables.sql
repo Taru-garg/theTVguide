@@ -88,12 +88,9 @@ SELECT * FROM MOVIES;
 
 -- Creating table ratings
 CREATE TABLE RATINGS (
-    mov_id INTEGER NOT NULL,
-    rev_id INTEGER NOT NULL,
+    mov_id INTEGER PRIMARY KEY,
     ratings DECIMAL(2,1),
-    num_of_ratings INTEGER,
     FOREIGN KEY(mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
-    UNIQUE(mov_id,rev_id)   
 );
 
 -- Test for table RATINGS
@@ -132,6 +129,7 @@ SELECT * FROM CAST;
 TRUNCATE TABLE CAST;
 
 ---------------------------------------------------------------------------------------
+
 -- Creating table movieImageData
 -- drop table movieImageData
 
@@ -159,6 +157,7 @@ delete from MOVIES where 1=1;
 delete from actor where 1=1;
 
 ---------------------------------------------------------------------------------------
+
 -- Creating table Direction
 -- drop table direction
 
