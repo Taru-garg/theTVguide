@@ -1,6 +1,9 @@
+import itertools
+from os import stat
 import numpy as np
 import pandas as pd
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 def formatColumn(filepath, column):
     file = pd.read_csv(filepath)
@@ -21,6 +24,7 @@ def formatColumn(filepath, column):
     npFormattedCast = np.unique(npFormattedCast)
     return npFormattedCast
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 def createInsertQueryActor(filepath):
     cast = formatColumn(filepath, 'Cast')
@@ -37,9 +41,13 @@ def createInsertQueryActor(filepath):
         # This step has to be done as sometimes actor might not have a last name
         else :
             InsertQuery = statement + f"({actId}, '{name[0]}', NULL, NULL, NULL);\n"
-        with open("utility/Database/actorTable.sql", "a+") as file:
+        
+        with open("utility/Database/sql/actorTable.sql", "a+") as file:
             file.write(InsertQuery)
         actId = actId + 1
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 def createInsertQueryDirector(filepath):
     Directors = formatColumn(filepath, 'Director')
@@ -53,15 +61,34 @@ def createInsertQueryDirector(filepath):
         if len(name) > 1:
             InsertQuery = statement + f"({dirId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
         
-        # This step has to be done as sometimes actor might not have a last name
+        # This step has to be done as sometimes director might not have a last name
         else :
             InsertQuery = statement + f"({dirId}, '{name[0]}', NULL, NULL, NULL);\n"
-        with open("utility/Database/directorTable.sql", "a+") as file:
+        
+        with open("utility/Database/sql/directorTable.sql", "a+") as file:
             file.write(InsertQuery)
         dirId = dirId + 1
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
+def createInsertQueryDirection(filepath):
+    directors = formatColumn(filepath, 'Director')
+    otherData = pd.read_csv(filepath, usecols=['ID', 'Director'])
+    directorsUnformatted = otherData['Director']
+    
+    dirTodirId = [np.searchsorted(directors,director)+1 for director in directorsUnformatted]
+    # Base statement
+    statement = "INSERT INTO DIRECTION VALUES "
+
+    for movID, dirID in itertools.zip_longest(otherData['ID'], dirTodirId):
+        InsertQuery = statement + f'({movID},{dirID});\n'
+        with open("utility/Database/sql/directionTable.sql", "a+") as file:
+            file.write(InsertQuery)
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
     file = input("Enter file Path: ")
     createInsertQueryActor(file)
     createInsertQueryDirector(file)
+    createInsertQueryDirection(file)

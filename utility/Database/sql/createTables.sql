@@ -4,7 +4,7 @@ create table ACTOR (
     act_id INT PRIMARY KEY,
     fname VARCHAR(40) NOT NULL,
     lname VARCHAR(40) NULL,
-    gender CHAR(1) NOT NULL,
+    gender CHAR(1) NULL,
     dob DATE NULL,
     constraint chk_gen_act check(upper(gender) in ('M', 'F', 'O')),
     constraint chk_dob_act check(DATEDIFF(month, dob, GETDATE()) >= 1)
@@ -112,8 +112,8 @@ TRUNCATE TABLE RATINGS;
 -- Creating table cast
 -- drop table cast
 CREATE TABLE CAST (
-    mov_id INTEGER,
-    act_id INTEGER,
+    mov_id INTEGER NOT NULL,
+    act_id INTEGER NOT NULL,
     PRIMARY KEY(mov_id, act_id),
     FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
     FOREIGN KEY (act_id) REFERENCES ACTOR(act_id) ON DELETE CASCADE
@@ -157,3 +157,15 @@ truncate table movieImageData;
 -- have a column which is foreign key
 delete from MOVIES where 1=1;
 delete from actor where 1=1;
+
+---------------------------------------------------------------------------------------
+-- Creating table Direction
+-- drop table direction
+
+CREATE table Direction (
+    mov_id INTEGER NOT NULL,
+    dir_id INTEGER NOT NULL,
+    PRIMARY KEY(mov_id, dir_id),
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
+    FOREIGN KEY (dir_id) REFERENCES DIRECTOR(dir_id) ON DELETE CASCADE
+);
