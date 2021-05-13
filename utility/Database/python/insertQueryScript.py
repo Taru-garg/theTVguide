@@ -1,6 +1,8 @@
 import pandas as pd
 import string
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
 def clean_text(text):
     text = str(text)
     text = text.replace(u'"','')
@@ -14,6 +16,8 @@ def clean_text(text):
     text=text.strip()
     return text
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
 def createInsertQueryGenres(filename):
     # Read the Data from the file provided
     movieData = pd.read_csv(filename)
@@ -22,7 +26,7 @@ def createInsertQueryGenres(filename):
     statement = "INSERT INTO GENRES VALUES "
 
     # Fetching all the unique Genres from the Genres Column Ignoring the null vals
-    uniqueGenres = movieData["Genres"].dropna().unique()
+    uniqueGenres = movieData["Genres"].unique()
     genId = 1
 
     # Make Query and insert it into a .sql file
