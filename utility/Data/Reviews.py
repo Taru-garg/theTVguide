@@ -6,7 +6,7 @@ def get_data(API_key, Movie_ID):
     query = (
         "https://api.themoviedb.org/3/movie/"
         + str(Movie_ID)
-        + "/reviews?api_key="
+        + "?api_key="
         + API_key
         + "&language=en-US"
     )
@@ -23,14 +23,15 @@ def write_file(filename, text, movie):
     dataset = json.loads(text)
     csvFile = open(filename, "a", encoding="utf-8", errors="ignore")
     csvwriter = csv.writer(csvFile)
-    Author = "" 
-    Rating= None
-    Content= ""
-    if(len(dataset["results"])>0):
-        Author=dataset["results"][0]["author"]
-        Rating=dataset["results"][0]["author_details"]["rating"]
-        Content=dataset["results"][0]["content"]
-    result = [movie,Author,Rating,Content]
+    try:
+        Rating=dataset["vote_average"]
+    except:
+        Rating=None 
+    try:
+        Likes=dataset["vote_count"]
+    except:
+        Likes=None        
+    result = [movie,Rating,Likes]
     csvwriter.writerow(result)
     print(result)
     csvFile.close()
@@ -38,7 +39,7 @@ def write_file(filename, text, movie):
 
 csvFile = open("movie_collection_data_reviews.csv", "a", encoding="utf-8", errors="ignore")
 csvwriter = csv.writer(csvFile)
-csvwriter.writerow(["ID", "Author", "Rating", "Content"])
+csvwriter.writerow(["ID", "Rating","Likes"])
 csvFile.close()
 for movie in range(10000, 10600):
     text = get_data(API_key, movie)
