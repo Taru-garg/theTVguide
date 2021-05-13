@@ -15,10 +15,11 @@ def createInsertQueryGenres(filename):
     # Make Query and insert it into a .sql file
     for genre in uniqueGenres:
         InsertQuery = statement + f"({genId}, '{genre}');\n"
-        with open("utility/Database/genreTable.sql", "a+") as file:
+        with open("utility/Database/sql/genreTable.sql", "a+") as file:
             file.write(InsertQuery)
         genId = genId + 1
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 def createInsertQueryMovies(filename):
     Movie_data = pd.read_csv(filename)
@@ -41,9 +42,10 @@ def createInsertQueryMovies(filename):
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
-        with open("utility/Database/moviesTable.sql", "a+") as file:
+        with open("utility/Database/sql/moviesTable.sql", "a+") as file:
             file.write(query)
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 def createInsertQueryImages(filename):
     image_data = pd.read_csv(filename)
@@ -60,9 +62,10 @@ def createInsertQueryImages(filename):
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
-        with open("utility/Database/movieImageTable.sql", "a+") as file:
+        with open("utility/Database/sql/movieImageTable.sql", "a+") as file:
             file.write(query)
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
     filename = input("Enter file path:")
