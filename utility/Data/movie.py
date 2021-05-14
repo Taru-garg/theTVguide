@@ -2,6 +2,7 @@
 # requests: package used to query API and get the result back in Python
 # json: package used to read and convert JSON format
 # csv: package used to read and write csv
+from typing_extensions import runtime
 import requests, json, csv, os
 
 # document all the parameters as variables
@@ -38,28 +39,27 @@ def write_file(filename, text, movie):
     try:
         backdrop_path = dataset["backdrop_path"]
     except:
-        # for movies that don't belong to a collection, assign null
         backdrop_path = None
     try:
         poster_path = dataset["poster_path"]
     except:
-        # for movies that don't belong to a collection, assign null
         backdrop_path = None
     try:
         genre = dataset["genres"][0]["name"]
     except:
-        # for movies that don't belong to a collection, assign null
         genre = None
     try:
         overview = dataset["overview"]
     except:
-        # for movies that don't belong to a collection, assign null
         overview = None
     try:
         release = dataset["release_date"]
     except:
-        # for movies that don't belong to a collection, assign null
         release = None
+    try:
+        Runtime = dataset["runtime"]
+    except:
+        Runtime = None    
     result = [
         movie,
         dataset["original_title"],
@@ -69,6 +69,7 @@ def write_file(filename, text, movie):
         collection_name,
         backdrop_path,
         poster_path,
+        Runtime,
     ]
     # write data
     csvwriter.writerow(result)
@@ -89,6 +90,7 @@ csvwriter.writerow(
         "Collection_name",
         "backdrop_path",
         "poster_path",
+        "Runtime",
     ]
 )
 csvFile.close()
