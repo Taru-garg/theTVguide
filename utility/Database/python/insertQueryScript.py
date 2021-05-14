@@ -59,9 +59,11 @@ def createInsertQueryMovies(filename):
         for j in attributesM:
             if pd.isnull(Movie_data[j][i]):
                 values += "NULL,"
-            else:
+            elif isinstance(Movie_data[j][i],str):
                 cleaned_value = clean_text(Movie_data[j][i])
                 values += f"'{cleaned_value}',"
+            else:
+                values += f"{Movie_data[j][i]},"
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
@@ -86,8 +88,11 @@ def createInsertQueryImages(filename):
         for j in attributesMI:
             if pd.isnull(image_data[j][i]):
                 values += "NULL,"
+            elif isinstance(image_data[j][i],str):
+                cleaned_value = clean_text(image_data[j][i])
+                values += f"'{cleaned_value}',"
             else:
-                values += f"'{image_data[j][i]}',"
+                values += f"{image_data[j][i]},"
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
