@@ -3,20 +3,23 @@ import string
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+
 def clean_text(text):
     text = str(text)
-    text = text.replace(u'"','')
-    text = text.replace(u"‘‘",'')
-    text = text.replace(u"’’",'')
-    text = text.replace(u"''",'')
-    text=text.replace(u"'",'')
-    text=text.replace(u"-",'')
-    text=text.replace(u"\\",'')
-    text=text.replace(u"_",'')
-    text=text.strip()
+    text = text.replace('"', "")
+    text = text.replace("‘‘", "")
+    text = text.replace("’’", "")
+    text = text.replace("''", "")
+    text = text.replace("'", "")
+    text = text.replace("-", "")
+    text = text.replace("\\", "")
+    text = text.replace("_", "")
+    text = text.strip()
     return text
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 def createInsertQueryGenres(filename):
     # Read the Data from the file provided
@@ -36,7 +39,9 @@ def createInsertQueryGenres(filename):
             file.write(InsertQuery)
         genId = genId + 1
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 def createInsertQueryMovies(filename):
     Movie_data = pd.read_csv(filename)
@@ -55,7 +60,7 @@ def createInsertQueryMovies(filename):
             if pd.isnull(Movie_data[j][i]):
                 values += "NULL,"
             else:
-                cleaned_value = clean_text(Movie_data[j][i]) 
+                cleaned_value = clean_text(Movie_data[j][i])
                 values += f"'{cleaned_value}',"
         values = values.rstrip(",")
         values += ");\n"
@@ -63,7 +68,9 @@ def createInsertQueryMovies(filename):
         with open("utility/Database/sql/moviesTable.sql", "a+") as file:
             file.write(query)
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 def createInsertQueryImages(filename):
     image_data = pd.read_csv(filename)
@@ -82,6 +89,7 @@ def createInsertQueryImages(filename):
         query = statement + values
         with open("utility/Database/sql/movieImageTable.sql", "a+") as file:
             file.write(query)
+
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 

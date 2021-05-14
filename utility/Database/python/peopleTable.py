@@ -1,5 +1,5 @@
 import itertools
-from os import stat
+from os import replace, stat
 import numpy as np
 import pandas as pd
 
@@ -100,8 +100,36 @@ def createInsertQueryDirection(filepath):
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+
+def createInsertQueryCast(filepath):
+    actor = formatColumn(filepath, "Cast")
+    movInfo = pd.read_csv(filepath, usecols=["ID", "Cast"])
+    castString = movInfo["Cast"]
+    movId = movInfo["ID"]
+    castSeperated = [
+        [cast.strip().replace("'", "") for cast in people.split(",")]
+        for people in castString
+    ]
+    castSeperatedtocastID = [
+        [np.searchsorted(actor, person) + 1 for person in actors]
+        for actors in castSeperated
+    ]
+
+    # Base statement
+    statement = "INSERT INTO CAST VALUES "
+
+    for i in range(0, len(movId)):
+        for j in range(0, len(castSeperatedtocastID[i])):
+            InsertQuery = statement + f"({movId[i]},{castSeperatedtocastID[i][j]});\n"
+            with open("utility/Database/sql/castTable.sql", "a+") as file:
+                file.write(InsertQuery)
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
 if __name__ == "__main__":
     file = input("Enter file Path: ")
     createInsertQueryActor(file)
     createInsertQueryDirector(file)
     createInsertQueryDirection(file)
+    createInsertQueryCast(file)
