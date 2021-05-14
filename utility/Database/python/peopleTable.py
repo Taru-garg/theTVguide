@@ -2,7 +2,7 @@ import itertools
 from os import replace, stat
 import numpy as np
 import pandas as pd
-
+from collections import defaultdict
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 
@@ -115,21 +115,23 @@ def createInsertQueryCast(filepath):
         for actors in castSeperated
     ]
 
+    mappings = []
     # Base statement
     statement = "INSERT INTO CAST VALUES "
-
     for i in range(0, len(movId)):
         for j in range(0, len(castSeperatedtocastID[i])):
+            if [movId[i], castSeperatedtocastID[i][j]] in mappings:
+                continue
             InsertQuery = statement + f"({movId[i]},{castSeperatedtocastID[i][j]});\n"
             with open("utility/Database/sql/castTable.sql", "a+") as file:
                 file.write(InsertQuery)
-
+            mappings.append([movId[i], castSeperatedtocastID[i][j]])
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
     file = input("Enter file Path: ")
-    createInsertQueryActor(file)
-    createInsertQueryDirector(file)
-    createInsertQueryDirection(file)
+    # createInsertQueryActor(file)
+    # createInsertQueryDirector(file)
+    # createInsertQueryDirection(file)
     createInsertQueryCast(file)
