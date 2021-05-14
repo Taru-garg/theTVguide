@@ -1,18 +1,25 @@
 import pandas as pd
 import string
 
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
+
 def clean_text(text):
     text = str(text)
-    text = text.replace(u'"','')
-    text = text.replace(u"‘‘",'')
-    text = text.replace(u"’’",'')
-    text = text.replace(u"''",'')
-    text=text.replace(u"'",'')
-    text=text.replace(u"-",'')
-    text=text.replace(u"\\",'')
-    text=text.replace(u"_",'')
-    text=text.strip()
+    text = text.replace('"', "")
+    text = text.replace("‘‘", "")
+    text = text.replace("’’", "")
+    text = text.replace("''", "")
+    text = text.replace("'", "")
+    text = text.replace("-", "")
+    text = text.replace("\\", "")
+    text = text.replace("_", "")
+    text = text.strip()
     return text
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 def createInsertQueryGenres(filename):
     # Read the Data from the file provided
@@ -22,15 +29,18 @@ def createInsertQueryGenres(filename):
     statement = "INSERT INTO GENRES VALUES "
 
     # Fetching all the unique Genres from the Genres Column Ignoring the null vals
-    uniqueGenres = movieData["Genres"].dropna().unique()
+    uniqueGenres = movieData["Genres"].unique()
     genId = 1
 
     # Make Query and insert it into a .sql file
     for genre in uniqueGenres:
         InsertQuery = statement + f"({genId}, '{genre}');\n"
-        with open("utility/Database/genreTable.sql", "a+") as file:
+        with open("utility/Database/sql/genreTable.sql", "a+") as file:
             file.write(InsertQuery)
         genId = genId + 1
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 
 def createInsertQueryMovies(filename):
@@ -50,13 +60,16 @@ def createInsertQueryMovies(filename):
             if pd.isnull(Movie_data[j][i]):
                 values += "NULL,"
             else:
-                cleaned_value = clean_text(Movie_data[j][i]) 
+                cleaned_value = clean_text(Movie_data[j][i])
                 values += f"'{cleaned_value}',"
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
-        with open("utility/Database/moviesTable.sql", "a+") as file:
+        with open("utility/Database/sql/moviesTable.sql", "a+") as file:
             file.write(query)
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 
 def createInsertQueryImages(filename):
@@ -78,9 +91,11 @@ def createInsertQueryImages(filename):
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
-        with open("utility/Database/movieImageTable.sql", "a+") as file:
+        with open("utility/Database/sql/movieImageTable.sql", "a+") as file:
             file.write(query)
 
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
     filename = input("Enter file path:")

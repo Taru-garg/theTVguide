@@ -1,9 +1,10 @@
 import itertools
-from os import stat
+from os import replace, stat
 import numpy as np
 import pandas as pd
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 def formatColumn(filepath, column):
     file = pd.read_csv(filepath)
@@ -24,24 +25,28 @@ def formatColumn(filepath, column):
     npFormattedCast = np.unique(npFormattedCast)
     return npFormattedCast
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+
 def createInsertQueryActor(filepath):
-    cast = formatColumn(filepath, 'Cast')
+    cast = formatColumn(filepath, "Cast")
 
     # Base statement
     statement = "INSERT INTO ACTOR VALUES "
 
     actId = 1
     for people in cast:
-        name = people.split(' ', 1)
+        name = people.split(" ", 1)
         if len(name) > 1:
-            InsertQuery = statement + f"({actId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
-        
+            InsertQuery = (
+                statement + f"({actId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
+            )
+
         # This step has to be done as sometimes actor might not have a last name
-        else :
+        else:
             InsertQuery = statement + f"({actId}, '{name[0]}', NULL, NULL, NULL);\n"
-        
+
         with open("utility/Database/sql/actorTable.sql", "a+") as file:
             file.write(InsertQuery)
         actId = actId + 1
@@ -49,41 +54,76 @@ def createInsertQueryActor(filepath):
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+
 def createInsertQueryDirector(filepath):
-    Directors = formatColumn(filepath, 'Director')
+    Directors = formatColumn(filepath, "Director")
 
     # Base statement
     statement = "INSERT INTO DIRECTOR VALUES "
 
     dirId = 1
     for people in Directors:
-        name = people.split(' ', 1)
+        name = people.split(" ", 1)
         if len(name) > 1:
-            InsertQuery = statement + f"({dirId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
-        
+            InsertQuery = (
+                statement + f"({dirId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
+            )
+
         # This step has to be done as sometimes director might not have a last name
-        else :
+        else:
             InsertQuery = statement + f"({dirId}, '{name[0]}', NULL, NULL, NULL);\n"
-        
+
         with open("utility/Database/sql/directorTable.sql", "a+") as file:
             file.write(InsertQuery)
         dirId = dirId + 1
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+
 def createInsertQueryDirection(filepath):
-    directors = formatColumn(filepath, 'Director')
-    otherData = pd.read_csv(filepath, usecols=['ID', 'Director'])
-    directorsUnformatted = otherData['Director']
-    
-    dirTodirId = [np.searchsorted(directors,director)+1 for director in directorsUnformatted]
+    directors = formatColumn(filepath, "Director")
+    otherData = pd.read_csv(filepath, usecols=["ID", "Director"])
+    directorsUnformatted = otherData["Director"]
+
+    dirTodirId = [
+        np.searchsorted(directors, director) + 1 for director in directorsUnformatted
+    ]
     # Base statement
     statement = "INSERT INTO DIRECTION VALUES "
 
-    for movID, dirID in itertools.zip_longest(otherData['ID'], dirTodirId):
-        InsertQuery = statement + f'({movID},{dirID});\n'
+    for movID, dirID in itertools.zip_longest(otherData["ID"], dirTodirId):
+        InsertQuery = statement + f"({movID},{dirID});\n"
         with open("utility/Database/sql/directionTable.sql", "a+") as file:
             file.write(InsertQuery)
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
+
+def createInsertQueryCast(filepath):
+    actor = formatColumn(filepath, "Cast")
+    movInfo = pd.read_csv(filepath, usecols=["ID", "Cast"])
+    castString = movInfo["Cast"]
+    movId = movInfo["ID"]
+    castSeperated = [
+        [cast.strip().replace("'", "") for cast in people.split(",")]
+        for people in castString
+    ]
+    castSeperatedtocastID = [
+        [np.searchsorted(actor, person) + 1 for person in actors]
+        for actors in castSeperated
+    ]
+
+    # Base statement
+    statement = "INSERT INTO CAST VALUES "
+
+    for i in range(0, len(movId)):
+        for j in range(0, len(castSeperatedtocastID[i])):
+            InsertQuery = statement + f"({movId[i]},{castSeperatedtocastID[i][j]});\n"
+            with open("utility/Database/sql/castTable.sql", "a+") as file:
+                file.write(InsertQuery)
+
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
@@ -92,3 +132,4 @@ if __name__ == "__main__":
     createInsertQueryActor(file)
     createInsertQueryDirector(file)
     createInsertQueryDirection(file)
+    createInsertQueryCast(file)
