@@ -62,7 +62,11 @@ def createInsertQueryMovies(filename):
 def createInsertQueryImages(filename):
     image_data = pd.read_csv(filename)
     image_data = image_data.dropna(axis=0, how="all")  # drop null records
-    attributesMI = ["ID", "backdrop_path", "poster_path"]  # required attributes
+    attributesMI = [
+        "ID",
+        "backdrop_path",
+        "poster_path"
+    ]  # required attributes
     statement = "INSERT INTO movieImageData VALUES "
     for i in range(image_data.shape[0]):
         values = "("
