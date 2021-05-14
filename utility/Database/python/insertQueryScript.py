@@ -59,11 +59,12 @@ def createInsertQueryMovies(filename):
         for j in attributesM:
             if pd.isnull(Movie_data[j][i]):
                 values += "NULL,"
-            else:
+            elif isinstance(Movie_data[j][i],str):
                 cleaned_value = clean_text(Movie_data[j][i])
                 values += f"'{cleaned_value}',"
-        values = values.rstrip(",")
-        values += ");\n"
+            else:
+                values += f"{Movie_data[j][i]},"
+        values += f"NULL,NULL,NULL);\n"
         query = statement + values
         with open("utility/Database/sql/moviesTable.sql", "a+") as file:
             file.write(query)
@@ -75,15 +76,22 @@ def createInsertQueryMovies(filename):
 def createInsertQueryImages(filename):
     image_data = pd.read_csv(filename)
     image_data = image_data.dropna(axis=0, how="all")  # drop null records
-    attributesMI = ["ID", "backdrop_path", "poster_path"]  # required attributes
+    attributesMI = [
+        "ID",
+        "backdrop_path",
+        "poster_path"
+    ]  # required attributes
     statement = "INSERT INTO movieImageData VALUES "
     for i in range(image_data.shape[0]):
         values = "("
         for j in attributesMI:
             if pd.isnull(image_data[j][i]):
                 values += "NULL,"
+            elif isinstance(image_data[j][i],str):
+                cleaned_value = clean_text(image_data[j][i])
+                values += f"'{cleaned_value}',"
             else:
-                values += f"'{image_data[j][i]}',"
+                values += f"{image_data[j][i]},"
         values = values.rstrip(",")
         values += ");\n"
         query = statement + values
