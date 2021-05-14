@@ -52,6 +52,7 @@ def createInsertQueryMovies(filename):
         "Movie_name",
         "Overview",
         "Release Date",
+        "Runtime"
     ]  # required attributes [for now]
     statement = "INSERT INTO MOVIES VALUES "
     for i in range(Movie_data.shape[0]):
@@ -64,7 +65,7 @@ def createInsertQueryMovies(filename):
                 values += f"'{cleaned_value}',"
             else:
                 values += f"{Movie_data[j][i]},"
-        values += f"NULL,NULL,NULL);\n"
+        values += f"NULL,NULL);\n"
         query = statement + values
         with open("utility/Database/sql/moviesTable.sql", "a+") as file:
             file.write(query)
