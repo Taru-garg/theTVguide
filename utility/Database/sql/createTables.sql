@@ -77,12 +77,12 @@ CREATE TABLE MOVIES (
 );
 
 --Test for table MOVIES
-INSERT INTO MOVIES
-VALUES
-(1,'Fight Club',151,'English','1999-10-15','Canada'),
-(2,'Shutter Island',139,'English','2010-02-13','Berlin');
+-- INSERT INTO MOVIES
+-- VALUES
+-- (1,'Fight Club',151,'English','1999-10-15','Canada'),
+-- (2,'Shutter Island',139,'English','2010-02-13','Berlin');
 
-SELECT * FROM MOVIES;
+-- SELECT * FROM MOVIES;
 
 ---------------------------------------------------------------------------------------
 
@@ -94,15 +94,15 @@ CREATE TABLE RATINGS (
 );
 
 -- Test for table RATINGS
-INSERT INTO RATINGS
-VALUES
-(1,21,8.8,1888),
-(1,22,8.6,1889),
-(2,21,9.1,2000),
-(2,22,9.7,2001);
+-- INSERT INTO RATINGS
+-- VALUES
+-- (1,21,8.8,1888),
+-- (1,22,8.6,1889),
+-- (2,21,9.1,2000),
+-- (2,22,9.7,2001);
 
-SELECT * FROM RATINGS;
-TRUNCATE TABLE RATINGS;
+-- SELECT * FROM RATINGS;
+-- TRUNCATE TABLE RATINGS;
 
 ---------------------------------------------------------------------------------------
 
@@ -118,15 +118,15 @@ TRUNCATE TABLE RATINGS;
 
 --Test for table CAST
 -- All the values must exist in movies and actor table
-INSERT INTO cast
-VALUES
-(1,2),
-(1,1),
-(2,1),
-(2,2);
+-- INSERT INTO cast
+-- VALUES
+-- (1,2),
+-- (1,1),
+-- (2,1),
+-- (2,2);
 
-SELECT * FROM CAST;
-TRUNCATE TABLE CAST;
+-- SELECT * FROM CAST;
+-- TRUNCATE TABLE CAST;
 
 ---------------------------------------------------------------------------------------
 
@@ -143,13 +143,13 @@ CREATE table movieImageData (
 -- Test for movieImageData
 -- mov_id must be in movie table
 
-insert into movieImageData
-values
-(1, 'somebackdrop', 'someposter'),
-(2, NULL, 'someposter');
+-- insert into movieImageData
+-- values
+-- (1, 'somebackdrop', 'someposter'),
+-- (2, NULL, 'someposter');
 
-select * from movieImageData;
-truncate table movieImageData;
+-- select * from movieImageData;
+-- truncate table movieImageData;
 
 -- Deleting all values because they
 -- have a column which is foreign key
@@ -168,6 +168,8 @@ CREATE table Direction (
     FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
     FOREIGN KEY (dir_id) REFERENCES DIRECTOR(dir_id) ON DELETE CASCADE
 );
+
+---------------------------------------------------------------------------------------
 
 create table movieGenre (
     mov_id INTEGER NOT NULL,

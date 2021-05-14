@@ -99,7 +99,6 @@ def createInsertQueryImages(filename):
         with open("utility/Database/sql/movieImageTable.sql", "a+") as file:
             file.write(query)
 
-
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
