@@ -168,3 +168,11 @@ CREATE table Direction (
     FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
     FOREIGN KEY (dir_id) REFERENCES DIRECTOR(dir_id) ON DELETE CASCADE
 );
+
+create table movieGenre (
+    mov_id INTEGER NOT NULL,
+    gen_id INTEGER NOT NULL,
+    PRIMARY KEY(mov_id, gen_id),
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
+    FOREIGN KEY (gen_id) REFERENCES GENRES(gen_id) ON DELETE CASCADE
+);
