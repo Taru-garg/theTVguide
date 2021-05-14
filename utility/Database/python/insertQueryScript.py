@@ -65,11 +65,8 @@ def createInsertQueryMovies(filename):
             else:
                 values += f"{Movie_data[j][i]},"
         values += f"NULL,NULL,NULL);\n"
-
-        
         query = statement + values
-        #with open("utility/Database/sql/moviesTable.sql", "a+") as file:
-        with open("moviesTable.sql", "a+") as file:
+        with open("utility/Database/sql/moviesTable.sql", "a+") as file:
             file.write(query)
 
 
@@ -106,6 +103,6 @@ def createInsertQueryImages(filename):
 
 if __name__ == "__main__":
     filename = input("Enter file path:")
-    #createInsertQueryGenres(filename)
+    createInsertQueryGenres(filename)
     createInsertQueryMovies(filename)
-    #createInsertQueryImages(filename)
+    createInsertQueryImages(filename)
