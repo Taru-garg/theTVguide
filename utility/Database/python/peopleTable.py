@@ -14,7 +14,8 @@ def formatColumn(filepath, column):
     # Formatting the Cast Column
     # further we only need unique names
     FormattedCast = [
-        [x.strip().replace("'", "") for x in people.split(",")] for people in cast
+        [x.strip().replace("'", "") for x in str(people).split(",")] 
+        for people in cast
     ]
 
     # with numpy we have an elegant solution
@@ -56,13 +57,12 @@ def createInsertQueryActor(filepath):
 
 def createInsertQueryDirector(filepath):
     Directors = formatColumn(filepath, "Director")
-
     # Base statement
     statement = "INSERT INTO DIRECTOR VALUES "
 
     dirId = 1
     for people in Directors:
-        name = people.split(" ", 1)
+        name = str(people).split(" ", 1)
         if len(name) > 1:
             InsertQuery = (
                 statement + f"({dirId}, '{name[0]}', '{name[1]}', NULL, NULL);\n"
@@ -86,7 +86,7 @@ def createInsertQueryDirection(filepath):
     directorsUnformatted = otherData["Director"]
 
     dirTodirId = [
-        np.searchsorted(directors, director) + 1 for director in directorsUnformatted
+        np.searchsorted(directors, str(director)) + 1 for director in directorsUnformatted
     ]
     # Base statement
     statement = "INSERT INTO DIRECTION VALUES "
@@ -131,7 +131,7 @@ def createInsertQueryCast(filepath):
 
 if __name__ == "__main__":
     file = input("Enter file Path: ")
-    # createInsertQueryActor(file)
-    # createInsertQueryDirector(file)
-    # createInsertQueryDirection(file)
-    createInsertQueryCast(file)
+    #createInsertQueryActor(file)
+    #createInsertQueryDirector(file)
+    createInsertQueryDirection(file)
+    #createInsertQueryCast(file)
