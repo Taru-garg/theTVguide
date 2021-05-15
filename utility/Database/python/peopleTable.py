@@ -1,6 +1,7 @@
 import itertools
 import numpy as np
 import pandas as pd
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 
@@ -124,6 +125,7 @@ def createInsertQueryCast(filepath):
             with open("utility/Database/sql/castTable.sql", "a+") as file:
                 file.write(InsertQuery)
             mappings.append([movId[i], castSeperatedtocastID[i][j]])
+
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 

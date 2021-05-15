@@ -1,6 +1,7 @@
+requests==2.22.0
 Flask==1.1.2
 numpy==1.19.5
 pyodbc==4.0.30
-requests==2.22.0
 pandas==1.2.3
+typing_extensions==3.7.4.3
 python-dotenv==0.17.1

@@ -1,6 +1,6 @@
+import itertools
 import pandas as pd
-import string
-
+import numpy as np
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 
@@ -30,6 +30,8 @@ def createInsertQueryGenres(filename):
 
     # Fetching all the unique Genres from the Genres Column Ignoring the null vals
     uniqueGenres = movieData["Genres"].unique()
+    uniqueGenres = [str(genre) for genre in uniqueGenres]
+    # uniqueGenressorted = np.sort(uniqueGenres)
     genId = 1
 
     # Make Query and insert it into a .sql file
@@ -52,7 +54,7 @@ def createInsertQueryMovies(filename):
         "Movie_name",
         "Overview",
         "Release Date",
-        "Runtime"
+        "Runtime",
     ]  # required attributes [for now]
     statement = "INSERT INTO MOVIES VALUES "
     for i in range(Movie_data.shape[0]):
@@ -60,7 +62,7 @@ def createInsertQueryMovies(filename):
         for j in attributesM:
             if pd.isnull(Movie_data[j][i]):
                 values += "NULL,"
-            elif isinstance(Movie_data[j][i],str):
+            elif isinstance(Movie_data[j][i], str):
                 cleaned_value = clean_text(Movie_data[j][i])
                 values += f"'{cleaned_value}',"
             else:
@@ -77,18 +79,14 @@ def createInsertQueryMovies(filename):
 def createInsertQueryImages(filename):
     image_data = pd.read_csv(filename)
     image_data = image_data.dropna(axis=0, how="all")  # drop null records
-    attributesMI = [
-        "ID",
-        "backdrop_path",
-        "poster_path"
-    ]  # required attributes
+    attributesMI = ["ID", "backdrop_path", "poster_path"]  # required attributes
     statement = "INSERT INTO movieImageData VALUES "
     for i in range(image_data.shape[0]):
         values = "("
         for j in attributesMI:
             if pd.isnull(image_data[j][i]):
                 values += "NULL,"
-            elif isinstance(image_data[j][i],str):
+            elif isinstance(image_data[j][i], str):
                 cleaned_value = clean_text(image_data[j][i])
                 values += f"'{cleaned_value}',"
             else:
@@ -99,10 +97,12 @@ def createInsertQueryImages(filename):
         with open("utility/Database/sql/movieImageTable.sql", "a+") as file:
             file.write(query)
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 if __name__ == "__main__":
     filename = input("Enter file path:")
-    createInsertQueryGenres(filename)
-    createInsertQueryMovies(filename)
-    createInsertQueryImages(filename)
+    # createInsertQueryGenres(filename)
+    # createInsertQueryMovies(filename)
+    # createInsertQueryImages(filename)

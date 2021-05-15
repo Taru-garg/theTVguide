@@ -170,11 +170,13 @@ CREATE table Direction (
 );
 
 ---------------------------------------------------------------------------------------
-
-create table movieGenre (
+-- insert all movie with genre in this table
+create table temp (
     mov_id INTEGER NOT NULL,
-    gen_id INTEGER NOT NULL,
-    PRIMARY KEY(mov_id, gen_id),
-    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
-    FOREIGN KEY (gen_id) REFERENCES GENRES(gen_id) ON DELETE CASCADE
+    gen VARCHAR(40) NOT NULL,
+    PRIMARY KEY(mov_id)
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE
 );
+
+select mov_id, gen_id into movieGenres from temp
+join GENRES on GENRES.genre = temp.gen

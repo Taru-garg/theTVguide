@@ -59,7 +59,7 @@ def write_file(filename, text, movie):
     try:
         Runtime = dataset["runtime"]
     except:
-        Runtime = None    
+        Runtime = None
     result = [
         movie,
         dataset["original_title"],
