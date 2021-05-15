@@ -100,9 +100,26 @@ def createInsertQueryImages(filename):
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+def createInsertQueryTemp(filename):
+    # Read the Data from the file provided
+    movieData = pd.read_csv(filename)
+
+    # Base Insert statement
+    statement = "INSERT INTO temp VALUES "
+
+    for i in range(movieData.shape[0]):
+        values = f"({movieData['ID'][i]},'{movieData['Genres'][i]}');\n"
+        query = statement + values
+        with open("utility/Database/sql/Temp.sql", "a+") as file:
+            file.write(query)
+
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
     filename = input("Enter file path:")
     # createInsertQueryGenres(filename)
     # createInsertQueryMovies(filename)
     # createInsertQueryImages(filename)
+    # createInsertQueryTemp(filename)
