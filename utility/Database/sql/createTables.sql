@@ -179,4 +179,5 @@ create table temp (
 );
 
 select mov_id, gen_id into movieGenres from temp
-join GENRES on GENRES.genre = temp.gen
+join GENRES on GENRES.genre = temp.gen;
+

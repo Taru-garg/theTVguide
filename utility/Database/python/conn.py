@@ -14,19 +14,26 @@ password = os.environ.get("PSWD")
 port = os.environ.get("PORT")
 driver = "{ODBC Driver 17 for SQL Server}"
 
-cnxn = pyodbc.connect(
-    "DRIVER="
-    + driver
-    + ";PORT=1433;SERVER="
-    + server
-    + ";PORT=1443;DATABASE="
-    + database
-    + ";UID="
-    + username
-    + ";PWD="
-    + password
-)
-cursor = cnxn.cursor()
-# cursor.execute("select * from actor")
-# row = cursor.fetchone()
-# print(row)
+
+def connect():
+    cnxn = pyodbc.connect(
+        "DRIVER="
+        + driver
+        + ";PORT=1433;SERVER="
+        + server
+        + ";PORT=1443;DATABASE="
+        + database
+        + ";UID="
+        + username
+        + ";PWD="
+        + password
+    )
+    cursor = cnxn.cursor()
+    return cursor
+
+def exectueQuery(movId, query=''):
+    cursor = connect()
+    # would be replaced by query
+    cursor.execute(f"select * from MOVIES where mov_id={movId}")
+    row = cursor.fetchone()
+    print(row)
