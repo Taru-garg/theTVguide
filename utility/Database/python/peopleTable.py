@@ -14,14 +14,16 @@ def formatColumn(filepath, column):
     # Formatting the Cast Column
     # further we only need unique names
     FormattedCast = [
-        [x.strip().replace("'", "") for x in str(people).split(",")] 
+        [x.strip().replace("'", "") for x in str(people).split(",")]
         for people in cast
     ]
+    FormattedCast = [actor for actors in FormattedCast for actor in actors]
 
     # with numpy we have an elegant solution
     # np.unique function not only selects unique
     # data from array but also array of arrays
     npFormattedCast = np.array(FormattedCast)
+    # npFormattedCast = npFormattedCast.flatten()
     npFormattedCast = np.unique(npFormattedCast)
     return npFormattedCast
 
@@ -34,7 +36,6 @@ def createInsertQueryActor(filepath):
 
     # Base statement
     statement = "INSERT INTO ACTOR VALUES "
-
     actId = 1
     for people in cast:
         name = people.split(" ", 1)
@@ -106,7 +107,7 @@ def createInsertQueryCast(filepath):
     castString = movInfo["Cast"]
     movId = movInfo["ID"]
     castSeperated = [
-        [cast.strip().replace("'", "") for cast in people.split(",")]
+        [cast.strip().replace("'", "") for cast in str(people).split(",")]
         for people in castString
     ]
     castSeperatedtocastID = [
@@ -131,7 +132,7 @@ def createInsertQueryCast(filepath):
 
 if __name__ == "__main__":
     file = input("Enter file Path: ")
-    #createInsertQueryActor(file)
+    # createInsertQueryActor(file)
     #createInsertQueryDirector(file)
-    createInsertQueryDirection(file)
-    #createInsertQueryCast(file)
+    #createInsertQueryDirection(file)
+    createInsertQueryCast(file)
