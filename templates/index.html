@@ -6,13 +6,13 @@
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
-                    <img src="../static/assets/images/poster2.jpg">
+                    <a href="{{movie1[0]}}"> <img src="{{movie1[2]}}"> </a>
                 </li>
                 <li class="splide__slide">
-                    <img src="../static/assets/images/poster2.jpg">
+                    <a href="{{movie2[0]}}"> <img src="{{movie2[2]}}"> </a>
                 </li>
                 <li class="splide__slide">
-                    <img src="../static/assets/images/poster2.jpg">
+                    <a href="{{movie3[0]}}"> <img src="{{movie3[2]}}"> </a>
                 </li>
             </ul>
         </div>
@@ -21,63 +21,32 @@
 
 <!--Horizontal Slider 1-->
 <section class="section">
-    <h2>A Section</h2>
+    <h2>Must Watch</h2>
     <div class="splide">
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
                     <div class="splide__slide__container">
-                        <img src="../static/assets/images/poster.jpg">
+                        <a href="{{movie1[0]}}"> <img src="{{movie1[3]}}"> </a>
                     </div>
-                    Lorem Ipsum Dolor Sit Amet
+                    {{movie1[1]}}
                 </li>
                 <li class="splide__slide">
                     <div class="splide__slide__container">
-                        <img src="../static/assets/images/poster.jpg">
+                        <a href="{{movie2[0]}}"> <img src="{{movie2[3]}}"> </a>
                     </div>
-                    Lorem Ipsum Dolor Sit Amet
+                    {{movie2[1]}}
+                </li>
+                <li class="splide__slide">
+                    <div class="splide__slide__container">
+                        <a href="{{movie3[0]}}"> <img src="{{movie3[3]}}"> </a>
+                    </div>
+                    {{movie3[1]}}
                 </li>
             </ul>
         </div>
     </div>
 </section>
-
-<!--Horizontal Slider 2-->
-<section class="section">
-    <h2>A Section</h2>
-    <div class="splide">
-        <div class="splide__track">
-            <ul class="splide__list">
-                <li class="splide__slide">
-                    <div class="splide__slide__container">
-                        <img src="../static/assets/images/poster.jpg">
-                    </div>
-                    Lorem Ipsum Dolor Sit Amet
-                </li>
-                <li class="splide__slide">
-                    <div class="splide__slide__container">
-                        <img src="../static/assets/images/poster.jpg">
-                    </div>
-                    Lorem Ipsum Dolor Sit Amet
-                </li>
-                <li class="splide__slide">
-                    <div class="splide__slide__container">
-                        <img src="../static/assets/images/poster.jpg">
-                    </div>
-                    Lorem Ipsum Dolor Sit Amet
-                </li>
-                <li class="splide__slide">
-                    <div class="splide__slide__container">
-                        <img src="../static/assets/images/poster.jpg">
-                    </div>
-                    Lorem Ipsum Dolor Sit Amet
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-</div>
-</body>
 {% endblock %}
 {% block script %}
 <script>
