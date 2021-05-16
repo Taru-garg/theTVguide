@@ -1,4 +1,5 @@
 import os
+from time import sleep
 import pyodbc
 from pathlib import Path
 from dotenv import load_dotenv

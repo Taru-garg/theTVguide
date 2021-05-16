@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect
 from flask.templating import render_template_string
 from utility import searchCleaning
 from utility.Database.python import conn
-
+from time import sleep
 # --------------------------------------------------------------------------------------------------------------------------------- #
 IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 app = Flask(__name__)
@@ -75,4 +75,4 @@ def home():
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
-    app.run(threaded=True)
+    app.run(debug=True)
