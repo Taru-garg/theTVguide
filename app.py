@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, redirect, render_template, request
+import time
 import random
 from utility import searchCleaning
 from utility.Database.python import conn
@@ -79,10 +80,15 @@ def home():
     query1 = f"EXECUTE Data @movId={movId1}"
     query2 = f"EXECUTE Data @movId={movId2}"
     query3 = f"EXECUTE Data @movId={movId3}"
+    
     # Getting the results
     cursor1 = conn.exectueQuery(query1)
+    time.sleep(5)
     cursor2 = conn.exectueQuery(query2)
+    time.sleep(5)
     cursor3 = conn.exectueQuery(query3)
+    time.sleep(5)
+
     # Extracting Columns
     columns = [column[0] for column in cursor1.description]
     # Mapping columns to dict
@@ -95,23 +101,25 @@ def home():
         movie1=[
             "/movie/" + str(results1["mov_id"]),
             results1["title"],
-            IMAGE_BASE_URL + results1["backdrop"],
-            IMAGE_BASE_URL + results1["poster"],
+            IMAGE_BASE_URL + str(results1["backdrop"]),
+            IMAGE_BASE_URL + str(results1["poster"]),
         ],
         movie2=[            
             "/movie/" + str(results2["mov_id"]),
             results2["title"],
-            IMAGE_BASE_URL + results2["backdrop"],
-            IMAGE_BASE_URL + results2["poster"],],
+            IMAGE_BASE_URL + str(results2["backdrop"]),
+            IMAGE_BASE_URL + str(results2["poster"]),
+        ],
         movie3=[            
             "/movie/" + str(results3["mov_id"]),
             results3["title"],
-            IMAGE_BASE_URL + results3["backdrop"],
-            IMAGE_BASE_URL + results3["poster"],],
+            IMAGE_BASE_URL + str(results3["backdrop"]),
+            IMAGE_BASE_URL + str(results3["poster"]),
+        ],
     )
 
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,threaded=False)
