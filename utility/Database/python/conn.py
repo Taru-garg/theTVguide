@@ -4,7 +4,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 
-envPath = Path("utility/Database/.env")
+envPath = Path("utility/Database/a.env")
 load_dotenv(dotenv_path=envPath)
 
 server = os.environ.get("SERVER")
