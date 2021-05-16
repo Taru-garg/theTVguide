@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, jsonify, redirect
-from flask.templating import render_template_string
+from flask import Flask, jsonify, redirect, render_template, request
+import random
 from utility import searchCleaning
 from utility.Database.python import conn
-from time import sleep
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
@@ -73,10 +72,13 @@ def searchEnter():
 
 @app.route("/")
 def home():
+    movId1 = random.randint(10000, 10300)
+    movId2 = random.randint(10000, 10300)
+    movId3 = random.randint(10000, 10300)
     # Queries
-    query1 = "EXECUTE Data @movId=10502"
-    query2 = "EXECUTE Data @movId=10509"
-    query3 = "EXECUTE Data @movId=10599"
+    query1 = f"EXECUTE Data @movId={movId1}"
+    query2 = f"EXECUTE Data @movId={movId2}"
+    query3 = f"EXECUTE Data @movId={movId3}"
     # Getting the results
     cursor1 = conn.exectueQuery(query1)
     cursor2 = conn.exectueQuery(query2)
