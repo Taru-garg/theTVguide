@@ -4,17 +4,38 @@ from utility import searchCleaning
 from utility.Database.python import conn
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
-
+IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 app = Flask(__name__)
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+
 @app.route("/movie/<id>")
 def movie(id):
-    conn.exectueQuery(id)
-    return render_template("movie.html")
+    # make the query
+    query = f"EXECUTE Data @movId={int(id)}"
+    # execute the query
+    cursor = conn.exectueQuery(query)
+    # extract the columns
+    columns = [column[0] for column in cursor.description]
+    # fetch the row and make dict
+    results = dict(zip(columns, cursor.fetchone()))
+    return render_template(
+        "movie.html",
+        title=str(results["title"]),
+        overview=str(results["overview"]),
+        length=results["length"],
+        director=results["Director"],
+        ratings=results["ratings"],
+        backdrop=IMAGE_BASE_URL + str(results["backdrop"]),
+        poster=IMAGE_BASE_URL + str(results["poster"]),
+        genre=str(results["genre"]),
+        date=results["initial_release_date"],
+    )
+
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 @app.route("/search", methods=["POST"])
 def searchInput():
@@ -27,7 +48,9 @@ def searchInput():
     )
     return response
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 @app.route("/search/go", methods=["POST"])
 def searchEnter():
@@ -35,11 +58,14 @@ def searchEnter():
     # print(data)
     return redirect("/")
 
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 

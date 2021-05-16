@@ -108,13 +108,13 @@ CREATE TABLE RATINGS (
 
 -- Creating table cast
 -- drop table cast
-    CREATE TABLE CAST (
-        mov_id INTEGER NOT NULL,
-        act_id INTEGER NOT NULL,
-        PRIMARY KEY(mov_id, act_id),
-        FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
-        FOREIGN KEY (act_id) REFERENCES ACTOR(act_id) ON DELETE CASCADE
-    );
+CREATE TABLE CAST (
+    mov_id INTEGER NOT NULL,
+    act_id INTEGER NOT NULL,
+    PRIMARY KEY(mov_id, act_id),
+    FOREIGN KEY (mov_id) REFERENCES MOVIES(mov_id) ON DELETE CASCADE,
+    FOREIGN KEY (act_id) REFERENCES ACTOR(act_id) ON DELETE CASCADE
+);
 
 --Test for table CAST
 -- All the values must exist in movies and actor table

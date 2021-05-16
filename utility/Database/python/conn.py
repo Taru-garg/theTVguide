@@ -31,9 +31,8 @@ def connect():
     cursor = cnxn.cursor()
     return cursor
 
-def exectueQuery(movId, query=''):
+
+def exectueQuery(query):
     cursor = connect()
-    # would be replaced by query
-    cursor.execute(f"select * from MOVIES where mov_id={movId}")
-    row = cursor.fetchone()
-    print(row)
+    cursor.execute(query)
+    return cursor

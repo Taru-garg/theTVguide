@@ -57,8 +57,8 @@ def write_file(filename, text, movie):
         Final_Cast = str(Final_Cast) + str(cast[i]) + " , "
         x = x - 1
         i = i + 1
-    n=len(Final_Cast)
-    Final_Cast=Final_Cast[:n-3]    
+    n = len(Final_Cast)
+    Final_Cast = Final_Cast[: n - 3]
     result = [movie, Final_Cast, Director, Producer]
     # write data
     csvwriter.writerow(result)

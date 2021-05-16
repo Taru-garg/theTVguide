@@ -1,6 +1,7 @@
 import itertools
 import pandas as pd
 import numpy as np
+
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 
@@ -100,6 +101,7 @@ def createInsertQueryImages(filename):
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
+
 def createInsertQueryTemp(filename):
     # Read the Data from the file provided
     movieData = pd.read_csv(filename)
@@ -112,7 +114,6 @@ def createInsertQueryTemp(filename):
         query = statement + values
         with open("utility/Database/sql/Temp.sql", "a+") as file:
             file.write(query)
-
 
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
