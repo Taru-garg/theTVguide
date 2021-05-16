@@ -13,7 +13,7 @@ def createInsertQueryRatings(filepath):
     for movID, rating in itertools.zip_longest(ratingData["ID"], ratingData["Rating"]):
         InsertQuery = statement + f"({movID}, {rating});\n"
 
-        with open("/home/vipul/theTVguide/utility/Database/sql/ratingTable.sql", "a+") as file:
+        with open("utility/Database/sql/ratingTable.sql", "a+") as file:
             file.write(InsertQuery)
 
 
