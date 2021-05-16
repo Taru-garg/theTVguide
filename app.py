@@ -38,6 +38,7 @@ def movie(id):
             poster=IMAGE_BASE_URL + str(results["poster"]),
             genre=str(results["genre"]),
             date=results["initial_release_date"],
+            likes=results["likes"],
         )
     except:
         return render_template("error_page.html")
