@@ -13,6 +13,7 @@ from utility.Database.python import conn
 IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 app = Flask(__name__)
 
+# Connect to the Database
 envPath = Path("utility/Database/.env")
 load_dotenv(dotenv_path=envPath)
 
@@ -35,13 +36,15 @@ cnxn = pyodbc.connect(
     + ";PWD="
     + password
 )
-
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 
 @app.errorhandler(404)
 def error():
     return render_template("error_page.html")
+
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
 
 
 @app.route("/movie/<id>")
