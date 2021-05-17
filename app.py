@@ -70,7 +70,7 @@ def movie(id):
             genre=str(results["genre"]),
             date=results["initial_release_date"],
             likes=results["likes"],
-            stars=results2['Cast'].split(','),
+            stars=results2["Cast"].split(","),
         )
     except:
         return render_template("error_page.html")
