@@ -14,9 +14,11 @@
         <div class="skew">
           <img src="{{backdrop}}">
           <div class="meta">
-            <p class="subhead">
-              {{title}} ({{date}})
-            </p>
+            <div class="meta2" style="background-color:lightgray; border-radius: 10px; max-width: 500px;">
+              <p class="subhead" style="margin-left: 10px; margin-right: 10px;">
+                {{title}} ({{date}})
+              </p>
+            </div>
             <p>
               <span>PG-13</span>
               <span>{{length}} min</span>
@@ -44,11 +46,12 @@
           <p>
           <h3>{{overview}}</h3>
           </p>
-          <p class="director"><b>Director:</b> <a href="https://www.imdb.com/search/name/?name={{director}}">{{director}}</a>
+          <p class="director"><b>Director:</b> <a
+              href="https://www.imdb.com/search/name/?name={{director}}">{{director}}</a>
           </p>
           <p class="stars"><b>Stars:</b>
             {% for actor in stars %}
-              <a href="https://www.imdb.com/search/name/?name={{actor}}">{{actor}}</a>,
+            <a href="https://www.imdb.com/search/name/?name={{actor}}">{{actor}}</a>,
             {% endfor %}
           </p>
         </div>
