@@ -24,12 +24,12 @@
               <span>{{genre}}</span>
               <br>
               <br>
-              <span >
-              <i class="md-icon-favorite"></i>
-              {{likes}}
-            </span>
+              <span>
+                <i class="md-icon-favorite"></i>
+                {{likes}}
+              </span>
             </p>
-            
+
           </div>
         </div>
       </div>
@@ -44,11 +44,13 @@
           <p>
           <h3>{{overview}}</h3>
           </p>
-          <p class="director"><b>Director:</b> <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_dr">{{director}}</a>
+          <p class="director"><b>Director:</b> <a href="https://www.imdb.com/search/name/?name={{director}}">{{director}}</a>
           </p>
-          <p class="stars"><b>Stars:</b> <a href="//www.imdb.com/name/nm0000190/?ref_=tt_ov_st">Matthew McConaughey</a>,
-            <a href="//www.imdb.com/name/nm0004266/?ref_=tt_ov_st">Anne Hathaway</a>, <a
-              href="//www.imdb.com/name/nm1567113/?ref_=tt_ov_st">Jessica Chastain</a> | <a
+          <p class="stars"><b>Stars:</b>
+            {% for actor in stars %}
+              <a href="https://www.imdb.com/search/name/?name={{actor}}">{{actor}}</a>,
+            {% endfor %}
+          </p>
         </div>
       </div>
     </div>

@@ -57,6 +57,7 @@ def movie(id):
         # execute the query
         results = conn.processQuerySingle(conn.executeQuery(query, cnxn))
         results2 = conn.processQuerySingle(conn.executeQuery(query2, cnxn))
+
         return render_template(
             "movie.html",
             title=str(results["title"]),
@@ -69,6 +70,7 @@ def movie(id):
             genre=str(results["genre"]),
             date=results["initial_release_date"],
             likes=results["likes"],
+            stars=results2['Cast'].split(','),
         )
     except:
         return render_template("error_page.html")
