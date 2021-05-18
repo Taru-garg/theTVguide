@@ -1,4 +1,7 @@
 // Function to send the data to the server
+var search = [
+];
+
 function sendData(searchString, urlPassed) {
     $.ajax({
         type: 'POST',
@@ -6,8 +9,8 @@ function sendData(searchString, urlPassed) {
         data: JSON.stringify({ 'data': searchString }),
         contentType: "application/json;charset=utf-8",
         dataType: "json",
-    }).done(function(response) {
-        console.log(JSON.stringify(response));
+    }).done(function (response) {
+        search = response['data']
     });
 }
 
@@ -15,7 +18,10 @@ function sendData(searchString, urlPassed) {
 $(document).ready(function () {
     $('#nav__search').on('input', function () {
         // Send any data input in the input search box
-        sendData($(this).val(), '/search');
+        if ($(this).val().length >= 3) {
+            sendData($(this).val(), '/search');
+        }
+
     });
     // Check for keypress
     $('#nav__search').on('keypress', function (event) {
@@ -35,12 +41,6 @@ $(document).ready(function () {
         // returned must have atleast 2 attributes
         // 1.   Value ---> Name of movie / director
         // 2.   Link  ---> Place to redirect
-        var search = [
-            { value: "Taru" },
-            { value: "Vipul" },
-            { value: "Nitin" },
-            { value: "Maulik" }
-        ];
         $('#nav__search').autocomplete({
             // Using a custom callback
             // simple search only compares string
@@ -50,12 +50,12 @@ $(document).ready(function () {
                 response(search);
             },
             select: function (event, ui) {
-                $('#nav__search').val(ui.item.value)
+                $('#nav__search').val(ui.item.title)
                 return false;
             }
         }).data('ui-autocomplete')._renderItem = function (ul, item) {
             return $('<li>')
-                .append('<a href="/search">' + item.value + '</a>')
+                .append('<a href="/movie/'+ item.mov_id +'">' + item.title + '</a>')
                 .appendTo(ul);
         };
     });

@@ -8,7 +8,7 @@ from flask import Flask, jsonify, redirect, render_template, request
 
 from utility import searchCleaning
 from utility.Database.python import conn
-
+from utility.Database.python import SimpleSearch
 # --------------------------------------------------------------------------------------------------------------------------------- #
 IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 app = Flask(__name__)
@@ -80,13 +80,19 @@ def movie(id):
 @app.route("/search", methods=["POST"])
 def searchInput():
     data = request.get_json()
-    # print(data)
-    response = jsonify(
-        data=searchCleaning.sanitize(data["data"]),
-        status=200,
-        mimetype="application/json",
-    )
-    return response
+    if data['data'] != '' and data['data'] != None and len(data['data'].strip()) >= 3:
+        response = jsonify(
+            data=SimpleSearch.SimpleSearch('%' + data['data'].strip() + '%', cnxn),
+            status=200,
+            mimetype="application/json",
+        )
+        return response
+    else :
+        response = jsonify(
+            status=404,
+            mimetype="application/json",
+        )
+        return response
 
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
@@ -94,21 +100,13 @@ def searchInput():
 
 @app.route("/search/go", methods=["POST"])
 def searchEnter():
+    # do sanitize one
     data = request.get_json()
-    # print(data)
-    return redirect("/")
+    results = SimpleSearch.SimpleSearch(data['data']+'%', cnxn)
+    return dict(results)
 
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
-
-
-@app.route("/hack/<param>")
-def func(param):
-    query = f"select * from movies where title= ?"
-    print(query)
-    results = conn.processQuerySingle(conn.executeQuery(query, param, cnxn))
-    return results
-
 
 @app.route("/")
 def home():
