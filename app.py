@@ -51,12 +51,12 @@ def error():
 def movie(id):
     try:
         # make the query
-        query = f"EXECUTE Data @movId={int(id)}"
-        query2 = f"EXECUTE fetchActors @movId={int(id)}"
+        query = f"EXECUTE Data @movId= ? "
+        query2 = f"EXECUTE fetchActors @movId= ? "
 
         # execute the query
-        results = conn.processQuerySingle(conn.executeQuery(query, cnxn))
-        results2 = conn.processQuerySingle(conn.executeQuery(query2, cnxn))
+        results = conn.processQuerySingle(conn.executeQuery(query, id, cnxn))
+        results2 = conn.processQuerySingle(conn.executeQuery(query2, id, cnxn))
 
         return render_template(
             "movie.html",
@@ -77,8 +77,6 @@ def movie(id):
 
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
-
-
 @app.route("/search", methods=["POST"])
 def searchInput():
     data = request.get_json()
@@ -104,20 +102,28 @@ def searchEnter():
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 
+@app.route("/hack/<param>")
+def func(param):
+    query = f"select * from movies where title= ?"
+    print(query)
+    results = conn.processQuerySingle(conn.executeQuery(query, param, cnxn))
+    return results
+
+
 @app.route("/")
 def home():
     movId1 = random.randint(10000, 10300)
     movId2 = random.randint(10000, 10300)
     movId3 = random.randint(10000, 10300)
     # Queries
-    query1 = f"EXECUTE Data @movId={movId1}"
-    query2 = f"EXECUTE Data @movId={movId2}"
-    query3 = f"EXECUTE Data @movId={movId3}"
+    query1 = f"EXECUTE Data @movId=?"
+    query2 = f"EXECUTE Data @movId=?"
+    query3 = f"EXECUTE Data @movId=?"
 
     # Getting the results
-    results1 = conn.processQuerySingle(conn.executeQuery(query1, cnxn))
-    results2 = conn.processQuerySingle(conn.executeQuery(query2, cnxn))
-    results3 = conn.processQuerySingle(conn.executeQuery(query3, cnxn))
+    results1 = conn.processQuerySingle(conn.executeQuery(query1, movId1, cnxn))
+    results2 = conn.processQuerySingle(conn.executeQuery(query2, movId2, cnxn))
+    results3 = conn.processQuerySingle(conn.executeQuery(query3, movId3, cnxn))
 
     return render_template(
         "index.html",
