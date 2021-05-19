@@ -9,13 +9,12 @@ from flask import Flask, jsonify, redirect, render_template, request
 from utility import searchCleaning
 from utility.Database.python import conn
 from utility.Database.python import SimpleSearch
-
 # --------------------------------------------------------------------------------------------------------------------------------- #
 IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 app = Flask(__name__)
 
 # Connect to the Database
-envPath = Path("utility/Database/.env")
+envPath = Path("utility/Database/a.env")
 load_dotenv(dotenv_path=envPath)
 
 server = os.environ.get("SERVER")
@@ -36,7 +35,7 @@ cnxn = pyodbc.connect(
     + username
     + ";PWD="
     + password
-    + ";MARS_Connection=Yes"
+    +";MARS_Connection=Yes"
 )
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
@@ -132,6 +131,7 @@ def home():
             results1["title"],
             IMAGE_BASE_URL + str(results1["backdrop"]),
             IMAGE_BASE_URL + str(results1["poster"]),
+           
         ],
         movie2=[
             "/movie/" + str(results2["mov_id"]),
@@ -147,6 +147,41 @@ def home():
         ],
     )
 
+
+# --------------------------------------------------------------------------------------------------------------------------------- #
+
+@app.route("/results")
+def result():
+    movId1 = random.randint(10000, 10300)
+    movId2 = random.randint(10000, 10300)
+    movId3 = random.randint(10000, 10300)
+    # Queries
+    query1 = f"EXECUTE Data @movId=?"
+    query2 = f"EXECUTE Data @movId=?"
+    query3 = f"EXECUTE Data @movId=?"
+
+    # Getting the results
+    results1 = conn.processQuerySingle(conn.executeQuery(query1, movId1, cnxn))
+    results2 = conn.processQuerySingle(conn.executeQuery(query2, movId2, cnxn))
+    results3 = conn.processQuerySingle(conn.executeQuery(query3, movId3, cnxn))
+
+    return render_template(
+        "results.html",
+        movie1=[
+            "/movie/" + str(results1["mov_id"]),
+            results1["title"],
+            IMAGE_BASE_URL + str(results1["backdrop"]),
+            IMAGE_BASE_URL + str(results1["poster"]),
+            results1["Director"],
+        ],
+        movie2=[
+            "/movie/" + str(results2["mov_id"]),
+            results2["title"],
+            IMAGE_BASE_URL + str(results2["backdrop"]),
+            IMAGE_BASE_URL + str(results2["poster"]),
+            results2["Director"],
+        ],
+    )
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
