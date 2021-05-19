@@ -190,16 +190,8 @@ body {
       display: inline-block;}
       
     .contant_box_404{ margin-top:-50px;}
- 
-    #movie h1 {
-      font-weight: 100;
-    }
-    
-    #movie h1 span {
-      font-size: 1rem;
-    }
-    
-     .movie {
+
+    .mov {
     max-width: 1200px;
     margin: 60px auto;
     padding: 5px 20px;
@@ -209,13 +201,20 @@ body {
     border-radius: 20px;
     text-align: left;
     display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
   }
     
-    .movie img {
+    .mov img {
     margin: 5%;
     width: 310px;
     height: 350px;
     object-fit: contain;
     }    
+    .mov h1 {
+      font-weight: 100;
+    }
+    
+    .mov h1 span {
+      font-size: 1rem;
+    }
