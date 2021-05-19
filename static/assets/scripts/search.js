@@ -18,8 +18,10 @@ function sendData(searchString, urlPassed) {
 $(document).ready(function () {
     $('#nav__search').on('input', function () {
         // Send any data input in the input search box
-        if ($(this).val().length >= 3) {
+        if ($(this).val().length > 2) {
             sendData($(this).val(), '/search');
+        } else {
+            search = []
         }
 
     });
@@ -47,7 +49,7 @@ $(document).ready(function () {
             // that since being done on server side
             // we can just append all the results
             source: function (request, response) {
-                response(search);
+                response(search.splice(0, 10));
             },
             select: function (event, ui) {
                 $('#nav__search').val(ui.item.title)

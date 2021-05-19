@@ -11,6 +11,7 @@ def processQuerySingle(cursor):
     results = dict(zip(columns, row))
     return results
 
+
 def processQueryMultiple(cursor):
     columns = [column[0] for column in cursor.description]
     rows = cursor.fetchall()
