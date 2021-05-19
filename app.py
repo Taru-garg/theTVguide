@@ -35,6 +35,7 @@ cnxn = pyodbc.connect(
     + username
     + ";PWD="
     + password
+    +";MARS_Connection=Yes"
 )
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
@@ -80,14 +81,14 @@ def movie(id):
 @app.route("/search", methods=["POST"])
 def searchInput():
     data = request.get_json()
-    if data['data'] != '' and data['data'] != None and len(data['data'].strip()) >= 3:
+    if data["data"] != "" and data["data"] != None and len(data["data"].strip()) >= 3:
         response = jsonify(
-            data=SimpleSearch.SimpleSearch('%' + data['data'].strip() + '%', cnxn),
+            data=SimpleSearch.SimpleSearch("%" + data["data"].strip() + "%", cnxn),
             status=200,
             mimetype="application/json",
         )
         return response
-    else :
+    else:
         response = jsonify(
             status=404,
             mimetype="application/json",
@@ -102,11 +103,12 @@ def searchInput():
 def searchEnter():
     # do sanitize one
     data = request.get_json()
-    results = SimpleSearch.SimpleSearch(data['data']+'%', cnxn)
+    results = SimpleSearch.SimpleSearch(data["data"] + "%", cnxn)
     return dict(results)
 
 
 # --------------------------------------------------------------------------------------------------------------------------------- #
+
 
 @app.route("/")
 def home():
@@ -185,4 +187,4 @@ def result():
 # --------------------------------------------------------------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
