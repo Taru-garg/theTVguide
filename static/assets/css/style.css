@@ -188,4 +188,34 @@ body {
       background: #39ac31;
       margin: 20px 0;
       display: inline-block;}
+      
     .contant_box_404{ margin-top:-50px;}
+ 
+    #movie h1 {
+      font-weight: 100;
+    }
+    
+    #movie h1 span {
+      font-size: 1rem;
+    }
+    
+     .movie {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 5px 20px;
+    background: #1A2980;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px;
+    text-align: left;
+    display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+  }
+    
+    .movie img {
+    margin: 5%;
+    width: 310px;
+    height: 350px;
+    object-fit: contain;
+    }    
