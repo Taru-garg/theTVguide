@@ -1,0 +1,2 @@
+Rename the file .ENV to .env
+Also, use this template when connecting to the DB
